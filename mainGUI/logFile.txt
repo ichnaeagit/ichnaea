@@ -758,3 +758,568 @@ Time last log:2016,11,7,10,7,
 Unaltered time diff: 0.0333333333333 min
 Duane Wilson commited to db
 
+Error in time calc or first logDuane Wilson commited to db
+
+Time now:2016,11,08,13,30,19,
+Time last log:2016,11,8,8,30,
+Unaltered time diff: 0.0666666666667 min
+Duane Wilson commited to db
+
+Time now:2016,11,08,13,48,37,
+Time last log:2016,11,8,8,30,
+Unaltered time diff: 18.3166666667 min
+Duane Wilson commited to db
+
+Time now:2016,11,08,13,51,18,
+Time last log:2016,11,7,13,21,
+Unaltered time diff: -270.066666667 min
+Error in time difference
+Teal Dowd commited to db
+
+Time now:2016,11,08,13,51,31,
+Time last log:2016,11,8,8,51,
+Unaltered time diff: 0.233333333333 min
+Teal Dowd commited to db
+
+Time now:2016,11,08,13,58,49,
+Time last log:2016,11,8,8,51,
+Unaltered time diff: 7.3 min
+Teal Dowd commited to db
+
+Time now:2016,11,08,14,00,06,
+Time last log:2016,11,7,14,17,
+Unaltered time diff: -317.466666667 min
+Error in time difference
+Nate Mueller commited to db
+
+Time now:2016,11,08,14,02,18,
+Time last log:2016,11,7,10,42,
+Unaltered time diff: -100.466666667 min
+Error in time difference
+Todd Gerardot commited to db
+
+Time now:2016,11,08,14,33,29,
+Time last log:2016,11,8,9,0,
+Unaltered time diff: 33.3833333333 min
+Nate Mueller commited to db
+
+Time now:2016,11,08,14,33,36,
+Time last log:2016,11,8,9,33,
+Unaltered time diff: 0.116666666667 min
+Nate Mueller commited to db
+
+Time now:2016,11,08,14,44,31,
+Time last log:2016,11,8,8,58,
+Unaltered time diff: 45.7166666667 min
+Teal Dowd commited to db
+
+Time now:2016,11,08,15,03,48,
+Time last log:2016,11,8,9,2,
+Unaltered time diff: 61.5 min
+Todd Gerardot commited to db
+
+Time now:2016,11,08,15,17,50,
+Time last log:2016,11,8,10,3,
+Unaltered time diff: 14.0333333333 min
+Todd Gerardot commited to db
+
+Time now:2016,11,08,15,25,27,
+Time last log:2016,11,8,9,44,
+Unaltered time diff: 40.9333333333 min
+Teal Dowd commited to db
+
+Time now:2016,11,08,15,27,15,
+Time last log:2016,11,8,9,33,
+Unaltered time diff: 53.65 min
+Nate Mueller commited to db
+
+Time now:2016,11,08,15,38,49,
+Time last log:2016,11,8,10,25,
+Unaltered time diff: 13.3666666667 min
+Teal Dowd commited to db
+
+Time now:2016,11,08,16,12,03,
+Time last log:2016,11,8,10,17,
+Unaltered time diff: 54.2166666667 min
+Todd Gerardot commited to db
+
+Time now:2016,11,08,16,34,14,
+Time last log:2016,11,8,11,12,
+Unaltered time diff: 22.1833333333 min
+Todd Gerardot commited to db
+
+Time now:2016,11,08,16,57,18,
+Time last log:2016,11,8,10,38,
+Unaltered time diff: 78.5 min
+Teal Dowd commited to db
+
+Time now:2016,11,08,16,57,23,
+Time last log:2016,11,8,10,27,
+Unaltered time diff: 90.1333333333 min
+Nate Mueller commited to db
+
+Time now:2016,11,08,18,04,46,
+Time last log:2016,11,8,11,57,
+Unaltered time diff: 67.3833333333 min
+Nate Mueller commited to db
+
+Time now:2016,11,08,18,24,19,
+Time last log:2016,11,8,13,4,
+Unaltered time diff: 19.55 min
+Nate Mueller commited to db
+
+Time now:2016,11,08,20,38,41,
+Time last log:2016,11,8,13,24,
+Unaltered time diff: 134.366666667 min
+Nate Mueller commited to db
+
+Time now:2016,11,08,20,39,05,
+Time last log:2016,11,8,11,57,
+Unaltered time diff: 221.783333333 min
+Teal Dowd commited to db
+
+Time now:2016,11,08,20,59,43,
+Time last log:2016,11,8,15,38,
+Unaltered time diff: 21.05 min
+Nate Mueller commited to db
+
+Time now:2016,11,08,21,15,18,
+Time last log:2016,11,8,15,39,
+Unaltered time diff: 36.2333333333 min
+Teal Dowd commited to db
+
+Time now:2016,11,08,21,39,25,
+Time last log:2016,11,8,15,59,
+Unaltered time diff: 39.7 min
+Nate Mueller commited to db
+
+Time now:2016,11,08,22,10,50,
+Time last log:2016,11,8,16,15,
+Unaltered time diff: 55.5333333333 min
+Teal Dowd commited to db
+
+Time now:2016,11,08,22,41,38,
+Time last log:2016,11,8,16,39,
+Unaltered time diff: 62.2333333333 min
+Nate Mueller commited to db
+
+Time now:2016,11,09,12,10,50,
+Time last log:2016,11,8,11,34,
+Unaltered time diff: -263.4 min
+Error in time difference
+Todd Gerardot commited to db
+
+Time now:2016,11,09,12,20,30,
+Time last log:2016,11,8,17,41,
+Unaltered time diff: -621.133333333 min
+Error in time difference
+Nate Mueller commited to db
+
+Time now:2016,11,09,13,30,21,
+Time last log:2016,11,9,7,10,
+Unaltered time diff: 79.5166666667 min
+Todd Gerardot commited to db
+
+Time now:2016,11,09,13,31,42,
+Time last log:2016,11,8,17,10,
+Unaltered time diff: -519.133333333 min
+Error in time difference
+Teal Dowd commited to db
+
+Time now:2016,11,09,13,31,51,
+Time last log:2016,11,9,7,20,
+Unaltered time diff: 71.35 min
+Nate Mueller commited to db
+
+Time now:2016,11,09,14,08,49,
+Time last log:2016,11,9,8,31,
+Unaltered time diff: 36.9666666667 min
+Nate Mueller commited to db
+
+Time now:2016,11,09,14,09,08,
+Time last log:2016,11,9,8,30,
+Unaltered time diff: 38.8 min
+Todd Gerardot commited to db
+
+Time now:2016,11,09,14,37,06,
+Time last log:2016,11,9,8,31,
+Unaltered time diff: 65.4 min
+Teal Dowd commited to db
+
+Time now:2016,11,09,14,37,10,
+Time last log:2016,11,9,9,37,
+Unaltered time diff: 0.0666666666667 min
+Teal Dowd commited to db
+
+Time now:2016,11,09,14,49,26,
+Time last log:2016,11,9,9,8,
+Unaltered time diff: 40.6166666667 min
+Nate Mueller commited to db
+
+Time now:2016,11,09,16,02,01,
+Time last log:2016,11,9,9,9,
+Unaltered time diff: 112.883333333 min
+Todd Gerardot commited to db
+
+Time now:2016,11,09,16,43,28,
+Time last log:2016,11,9,11,2,
+Unaltered time diff: 41.0 min
+Todd Gerardot commited to db
+
+Time now:2016,11,09,16,44,13,
+Time last log:2016,11,9,9,49,
+Unaltered time diff: 114.783333333 min
+Nate Mueller commited to db
+
+Time now:2016,11,09,17,13,41,
+Time last log:2016,11,9,11,43,
+Unaltered time diff: 30.2166666667 min
+Todd Gerardot commited to db
+
+Time now:2016,11,09,17,54,56,
+Time last log:2016,11,9,11,44,
+Unaltered time diff: 70.7333333333 min
+Nate Mueller commited to db
+
+Time now:2016,11,09,18,47,30,
+Time last log:2016,11,9,10,19,
+Unaltered time diff: 207.65 min
+Teal Dowd commited to db
+
+Time now:2016,11,09,18,55,54,
+Time last log:2016,11,9,12,54,
+Unaltered time diff: 60.9666666667 min
+Nate Mueller commited to db
+
+Time now:2016,11,09,19,30,41,
+Time last log:2016,11,9,13,55,
+Unaltered time diff: 34.7833333333 min
+Nate Mueller commited to db
+
+Time now:2016,11,09,20,32,08,
+Time last log:2016,11,9,14,30,
+Unaltered time diff: 61.45 min
+Nate Mueller commited to db
+
+Time now:2016,11,09,20,53,08,
+Time last log:2016,11,9,12,13,
+Unaltered time diff: 219.466666667 min
+Todd Gerardot commited to db
+
+Time now:2016,11,09,21,23,30,
+Time last log:2016,11,9,15,32,
+Unaltered time diff: 51.3666666667 min
+Nate Mueller commited to db
+
+Time now:2016,11,09,22,22,03,
+Time last log:2016,11,9,13,47,
+Unaltered time diff: 214.55 min
+Teal Dowd commited to db
+
+Time now:2016,11,09,22,22,06,
+Time last log:2016,11,9,17,22,
+Unaltered time diff: 0.05 min
+Teal Dowd commited to db
+
+Time now:2016,11,09,22,40,02,
+Time last log:2016,11,9,16,23,
+Unaltered time diff: 76.5333333333 min
+Nate Mueller commited to db
+
+Time now:2016,11,10,12,01,37,
+Time last log:2016,11,9,15,53,
+Unaltered time diff: -531.516666667 min
+Error in time difference
+Todd Gerardot commited to db
+
+Time now:2016,11,10,14,12,51,
+Time last log:2016,11,9,17,40,
+Unaltered time diff: -507.183333333 min
+Error in time difference
+Nate Mueller commited to db
+
+Time now:2016,11,10,14,25,12,
+Time last log:2016,11,10,7,1,
+Unaltered time diff: 143.6 min
+Todd Gerardot commited to db
+
+Time now:2016,11,10,14,25,16,
+Time last log:2016,11,10,8,30,
+Unaltered time diff: 55.0 min
+Teal Dowd commited to db
+
+Time now:2016,11,10,14,30,43,
+Time last log:2016,11,10,9,12,
+Unaltered time diff: 17.8666666667 min
+Nate Mueller commited to db
+
+Time now:2016,11,10,14,31,48,
+Time last log:2016,11,10,9,25,
+Unaltered time diff: 6.53333333333 min
+Teal Dowd commited to db
+
+Time now:2016,11,10,14,37,11,
+Time last log:2016,11,10,9,25,
+Unaltered time diff: 11.9833333333 min
+Todd Gerardot commited to db
+
+Time now:2016,11,10,16,06,03,
+Time last log:2016,11,10,9,30,
+Unaltered time diff: 95.3333333333 min
+Nate Mueller commited to db
+
+Time now:2016,11,10,16,32,01,
+Time last log:2016,11,10,11,6,
+Unaltered time diff: 25.9833333333 min
+Nate Mueller commited to db
+
+Time now:2016,11,10,16,34,51,
+Time last log:2016,11,10,9,31,
+Unaltered time diff: 123.05 min
+Teal Dowd commited to db
+
+Time now:2016,11,10,16,46,03,
+Time last log:2016,11,10,11,32,
+Unaltered time diff: 14.0333333333 min
+Nate Mueller commited to db
+
+Time now:2016,11,10,16,55,02,
+Time last log:2016,11,10,11,46,
+Unaltered time diff: 9.0 min
+Nate Mueller commited to db
+
+Time now:2016,11,10,17,06,20,
+Time last log:2016,11,10,9,37,
+Unaltered time diff: 149.15 min
+Todd Gerardot commited to db
+
+Time now:2016,11,10,17,58,33,
+Time last log:2016,11,10,12,6,
+Unaltered time diff: 52.2166666667 min
+Todd Gerardot commited to db
+
+Time now:2016,11,10,18,08,31,
+Time last log:2016,11,10,11,55,
+Unaltered time diff: 73.5 min
+Nate Mueller commited to db
+
+Time now:2016,11,10,18,26,20,
+Time last log:2016,11,10,11,34,
+Unaltered time diff: 111.483333333 min
+Teal Dowd commited to db
+
+Time now:2016,11,10,18,52,15,
+Time last log:2016,11,10,13,8,
+Unaltered time diff: 43.75 min
+Nate Mueller commited to db
+
+Time now:2016,11,10,19,24,39,
+Time last log:2016,11,10,12,58,
+Unaltered time diff: 86.1166666667 min
+Todd Gerardot commited to db
+
+Time now:2016,11,10,20,04,20,
+Time last log:2016,11,10,14,24,
+Unaltered time diff: 39.6833333333 min
+Todd Gerardot commited to db
+
+Time now:2016,11,10,21,19,06,
+Time last log:2016,11,10,13,26,
+Unaltered time diff: 172.783333333 min
+Teal Dowd commited to db
+
+Time now:2016,11,10,21,43,41,
+Time last log:2016,11,10,16,19,
+Unaltered time diff: 24.5833333333 min
+Teal Dowd commited to db
+
+Time now:2016,11,10,21,48,00,
+Time last log:2016,11,10,16,43,
+Unaltered time diff: 4.31666666667 min
+Teal Dowd commited to db
+
+Time now:2016,11,10,21,48,14,
+Time last log:2016,11,10,13,52,
+Unaltered time diff: 176.0 min
+Nate Mueller commited to db
+
+Time now:2016,11,11,12,36,22,
+Time last log:2016,11,10,16,48,
+Unaltered time diff: -551.866666667 min
+Error in time difference
+Nate Mueller commited to db
+
+Time now:2016,11,11,13,57,11,
+Time last log:2016,11,11,7,36,
+Unaltered time diff: 80.8166666667 min
+Nate Mueller commited to db
+
+Time now:2016,11,11,14,58,35,
+Time last log:2016,11,11,9,0,
+Unaltered time diff: 58.0 min
+Teal Dowd commited to db
+
+Time now:2016,11,11,16,13,50,
+Time last log:2016,11,11,8,57,
+Unaltered time diff: 136.666666667 min
+Nate Mueller commited to db
+
+Time now:2016,11,11,17,04,05,
+Time last log:2016,11,11,11,13,
+Unaltered time diff: 50.25 min
+Nate Mueller commited to db
+
+Time now:2016,11,11,17,08,41,
+Time last log:2016,11,11,11,30,
+Unaltered time diff: 38.0 min
+Teal Dowd commited to db
+
+Time now:2016,11,11,17,29,37,
+Time last log:2016,11,11,12,8,
+Unaltered time diff: 20.9333333333 min
+Teal Dowd commited to db
+
+Time now:2016,11,11,18,22,32,
+Time last log:2016,11,11,12,4,
+Unaltered time diff: 78.45 min
+Nate Mueller commited to db
+
+Time now:2016,11,11,18,39,40,
+Time last log:2016,11,11,13,22,
+Unaltered time diff: 17.1333333333 min
+Nate Mueller commited to db
+
+Time now:2016,11,11,19,08,18,
+Time last log:2016,11,11,12,29,
+Unaltered time diff: 98.6833333333 min
+Teal Dowd commited to db
+
+Time now:2016,11,11,19,26,04,
+Time last log:2016,11,11,14,8,
+Unaltered time diff: 17.7666666667 min
+Teal Dowd commited to db
+
+Time now:2016,11,11,20,58,13,
+Time last log:2016,11,11,13,39,
+Unaltered time diff: 138.55 min
+Nate Mueller commited to db
+
+Time now:2016,11,11,22,28,24,
+Time last log:2016,11,11,15,58,
+Unaltered time diff: 90.2 min
+Nate Mueller commited to db
+
+Time now:2016,11,11,22,32,05,
+Time last log:2016,11,11,17,28,
+Unaltered time diff: 3.7 min
+Nate Mueller commited to db
+
+Getting projects failed. User not registered (or connection issue)
+Getting projects failed. User not registered (or connection issue)
+Getting projects failed. User not registered (or connection issue)
+Getting projects failed. User not registered (or connection issue)
+Time now:2016,11,14,13,31,11,
+Time last log:2016,11,11,14,26,
+Unaltered time diff: -354.883333333 min
+Error in time difference
+Teal Dowd commited to db
+
+Time now:2016,11,14,13,46,51,
+Time last log:2016,11,14,8,31,
+Unaltered time diff: 15.6666666667 min
+Teal Dowd commited to db
+
+Time now:2016,11,14,13,47,01,
+Time last log:2016,11,10,15,4,
+Unaltered time diff: -377.316666667 min
+Error in time difference
+Todd Gerardot commited to db
+
+Time now:2016,11,14,13,47,16,
+Time last log:2016,11,7,10,4,
+Unaltered time diff: -77.25 min
+Error in time difference
+Troy Schipper commited to db
+
+Time now:2016,11,14,17,03,02,
+Time last log:2016,11,14,8,47,
+Unaltered time diff: 196.016666667 min
+Todd Gerardot commited to db
+
+Time now:2016,11,14,17,29,23,
+Time last log:2016,11,14,12,3,
+Unaltered time diff: 26.35 min
+Todd Gerardot commited to db
+
+Time now:2016,11,14,17,41,58,
+Time last log:2016,11,11,17,32,
+Unaltered time diff: -290.116666667 min
+Error in time difference
+Nate Mueller commited to db
+
+Time now:2016,11,14,17,54,59,
+Time last log:2016,11,14,12,29,
+Unaltered time diff: 25.6 min
+Todd Gerardot commited to db
+
+Time now:2016,11,14,18,01,10,
+Time last log:2016,11,14,12,41,
+Unaltered time diff: 19.2 min
+Nate Mueller commited to db
+
+Time now:2016,11,14,19,31,01,
+Time last log:2016,11,14,12,54,
+Unaltered time diff: 96.0333333333 min
+Todd Gerardot commited to db
+
+Time now:2016,11,14,19,37,45,
+Time last log:2016,11,14,14,31,
+Unaltered time diff: 6.73333333333 min
+Todd Gerardot commited to db
+
+Time now:2016,11,14,19,57,13,
+Time last log:2016,11,14,13,1,
+Unaltered time diff: 116.05 min
+Nate Mueller commited to db
+
+Time now:2016,11,14,20,59,36,
+Time last log:2016,11,14,14,37,
+Unaltered time diff: 81.8333333333 min
+Todd Gerardot commited to db
+
+Time now:2016,11,14,21,26,32,
+Time last log:2016,11,14,16,0,
+Unaltered time diff: 26.0 min
+Teal Dowd commited to db
+
+Time now:2016,11,14,21,30,47,
+Time last log:2016,11,14,14,57,
+Unaltered time diff: 93.55 min
+Nate Mueller commited to db
+
+Time now:2016,11,14,21,37,40,
+Time last log:2016,11,14,16,26,
+Unaltered time diff: 11.1333333333 min
+Teal Dowd commited to db
+
+Time now:2016,11,14,21,43,00,
+Time last log:2016,11,14,16,37,
+Unaltered time diff: 5.35 min
+Teal Dowd commited to db
+
+Time now:2016,11,14,21,43,05,
+Time last log:2016,11,8,8,48,
+Unaltered time diff: 474.466666667 min
+Time diff too long
+Duane Wilson commited to db
+
+Time now:2016,11,14,21,43,08,
+Time last log:2016,11,14,16,43,
+Unaltered time diff: 0.0666666666667 min
+Duane Wilson commited to db
+
+Time now:2016,11,14,21,43,37,
+Time last log:2016,11,14,16,42,
+Unaltered time diff: 0.633333333333 min
+Teal Dowd commited to db
+
