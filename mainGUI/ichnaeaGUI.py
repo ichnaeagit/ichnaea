@@ -6,7 +6,6 @@ import signal
 import sys
 import MySQLdb
 import time
-import readID
 from time import gmtime, strftime
 import datetime
 import urllib2
