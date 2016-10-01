@@ -1,40 +1,37 @@
-import Tkinter as tk
-import tkMessageBox
-import RPi.GPIO as GPIO
-import signal
-#import cardReadModule as cardRead
-import sys
-import MySQLdb
-import time
-from time import gmtime, strftime
-import datetime
-import urllib2
-import MFRC522
+import Tkinter as tk    # For GUI code
+import tkMessageBox     # For error boxes
+import RPi.GPIO as GPIO # For using GPIO pins
+import signal   # Not sure
+import sys      # Used for exiting apps
+import MySQLdb  # Talk to mysql database
+import urllib2  # For reading websites
+import MFRC522  # Used for reading ID card
 
-continuousRun = True
+continuousRun = True #Always runs
 
+# How to quite program
 def quitProgram():
         continuousRun = False
         print "Exiting"
         root.destroy()
         sys.exit()
 
-def cardRead():
-
-    # Capture SIGINT for cleanup when the script is aborted
-    def end_read(signal,frame):
+# Capture SIGINT for cleanup when the script is aborted
+def end_read(signal,frame):
         print "Ctrl+C captured, ending read."
         GPIO.cleanup()
         sys.exit()
+
+def cardRead():
 
     # Hook the SIGINT
     signal.signal(signal.SIGINT, end_read)
 
     # Create an object of the class MFRC522
     MIFAREReader = MFRC522.MFRC522()
-      # This loop keeps checking for chips. If one is near it will get the UID and authenticate
+    # This loop keeps checking for chips. If one is near it will get the UID and authenticate
 
-    # infinite read loop
+    # infinite read loop for ID cards
     while True:
         
         # Scan for cards    
@@ -47,13 +44,10 @@ def cardRead():
         (status,uid) = MIFAREReader.MFRC522_Anticoll()
         # If we have the UID, continue
         if status == MIFAREReader.MI_OK:
-            var1 = str(uid[0])
-            var2 = str(uid[1])
-            var3 = str(uid[2])
-            var4 = str(uid[3])
 
-            ID = int(var1 + var2 + var3 + var4)
+            ID = int(str(uid[0]) + str(uid[1]) + str(uid[2]) + str(uid[3]))
 
+            # Sets default username and clock number
             userName = 'failed db connect'
             userClockNum = 00000
             
@@ -237,89 +231,51 @@ def buttonPressed():
         root.destroy()
         return
 
-    # Prints whichever projects people have, if they have them
-    if projects[4]:
-        button01 = tk.Button(root,text = projects[4], bg="RoyalBlue1",  command=lambda: saveinfo(ID,projects[4],name),  width = '20', height=1, font = ("Helvetica", 24))
-        if projects[10]: button01.grid(pady=2)
-        else: button01.grid(pady=10)
-    if projects[5]:
-        button02 = tk.Button(root,text=projects[5], bg="turquoise4",command=lambda: saveinfo(ID,projects[5],name),  width = '20', height=1, font = ("Helvetica", 24))
-        if projects[10]: button02.grid(pady=2)
-        else: button02.grid(pady=10)
-    if projects[6]:
-        button03 = tk.Button(root,text=projects[6], bg="seagreen",  command=lambda: saveinfo(ID,projects[6],name),  width = '20', height=1, font = ("Helvetica", 24))
-        if projects[10]: button03.grid(pady=2)
-        else: button03.grid(pady=10)
-    if projects[7]:
-        button04 = tk.Button(root,text=projects[7], bg="RoyalBlue1",command=lambda: saveinfo(ID,projects[7],name),  width = '20', height=1, font = ("Helvetica", 24))
-        if projects[10]: button04.grid(pady=2)
-        else: button04.grid(pady=10)
-    if projects[8]:
-        button05 = tk.Button(root,text=projects[8], bg="turquoise4",command=lambda: saveinfo(ID,projects[8],name),  width = '20', height=1, font = ("Helvetica", 24))
-        if projects[10]: button05.grid(pady=2)
-        else: button05.grid(pady=10)
-    if projects[9]:
-        button06 = tk.Button(root,text=projects[9], bg="seagreen",  command=lambda: saveinfo(ID,projects[9],name),  width = '20', height=1, font = ("Helvetica", 24))
-        if projects[10]: button06.grid(pady=2)
-        else: button06.grid(pady=10)
-    if projects[10]:
-        button07 = tk.Button(root,text=projects[10], bg="RoyalBlue1",command=lambda: saveinfo(ID,projects[10],name), width = '20', height=1, font = ("Helvetica", 24))
-        if projects[10]: button07.grid(pady=2)
-        else: button07.grid(pady=10)
-    if projects[11]:
-        button08 = tk.Button(root,text=projects[11], bg="turquoise4",command=lambda: saveinfo(ID,projects[11],name), width = '20', height=1, font = ("Helvetica", 24))
-        if projects[10]: button08.grid(pady=2)
-        else: button09.grid(pady=10)
-    if projects[12]:
-        button09 = tk.Button(root,text=projects[12], bg="seagreen", command=lambda: saveinfo(ID,projects[12],name), width = '20', height=1, font = ("Helvetica", 24))
-        if projects[10]: button09.grid(pady=2)
-        else: button09.grid(pady=10)
-    if projects[13]:
-        button10 = tk.Button(root,text=projects[13], bg="turquoise1",command=lambda: saveinfo(ID,projects[13],name), width = '20', height=1, font = ("Helvetica", 24))
-        if projects[10]: button10.grid(pady=2)
-        else: button10.gird(pady=10)
+    # Sets pad size depending on how many projects
+    padSize = 20
+    if projects[7]: padSize = 10
+    if projects[10]: padSize = 2
+    
+    # Create buttons
+    i=int(4)
+    while projects[i]: # For each valid project
 
-    button11 = tk.Button(root,text='Clock Off', bg="red", command=lambda: saveinfo(ID,"Clock Off",name), width = '20',height=1, font = ("Helvetica", 24))
-    if projects[10]: button11.grid(pady=2)
-    else: button11.grid(pady=10)
+        # Create button with given label, and alternate colors
+        # the i=i makes each button get a unique callback
+        # pad size changes from above
+        tk.Button(root,text = projects[i], \
+            bg= ("RoyalBlue1" if i % 2 else "turquoise4"),  command=lambda i=i: \
+            saveinfo(ID,projects[i],name),  \
+            width = '20', height=1, font = ("Helvetica", 24)) \
+            .grid(pady=padSize)
 
+        i=i+1 # Iterates i
 
+    # Creates clock off button
+    tk.Button(root,text='Clock Off', bg="red", command=lambda: \
+        saveinfo(ID,"Clock Off",name), width = '20', \
+        height=1, font = ("Helvetica", 24)). \
+        grid(pady=padSize)
+
+# Continuously runs main app
 while continuousRun:
 
     class MainApplication(tk.Frame):
         def __init__(self,parent, *args, **kwargs):
             tk.Frame.__init__(self,parent, *args, **kwargs)
             self.parent = parent
-            root.geometry('475x750+0+0')
-            #main GUI here
-
-
-            #quitButton = tk.Button(root, text='Quit program', bg="red", fg ="black",height=1,width=65,font=("Helvetica",9), command = quitProgram)
-            #quitButton.grid()
-
-            #scanButton = tk.Button(root,text='Click here to scan', bg="red", fg="white", height = 3, font=("Helvetica",16), command = buttonPressed)
-            #scanButton.pack(padx=5, pady=4)
+            root.geometry('475x750+0+0') # Sets size of app
 
             scanCard = tk.Label(root, text="Please Scan Card", font=("papyrus",30), fg="red", width=20)
             scanCard.grid(pady=10)
-            
-            #feedbackLabel = tk.Label(root, textvariable=helpText, fg="blue")
-            #feedbackLabel.grid()
-            
+
+            # auto starts code after generating the GUI
             root.after(500, buttonPressed)
 
-            #print "started\n\n"
-
-            #root.protocol('WM_DELETE_WINDOW', quitProgram)
-
+   # Allows to run as main or as a function
     if __name__ == "__main__":
 
-        global button01, button02, button03, button04, button05
-        global button06, button07, button08, button09, button10 
-        global button11, button12
-            
         root = tk.Tk()
         root.title("Ichnaea time tracking")
-        #MainApplication(root).pack(side="top",fill="both",expand=True)
         display = MainApplication(root)
         root.mainloop()

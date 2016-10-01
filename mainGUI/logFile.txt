@@ -1343,3 +1343,204 @@ Time last log:2016,11,14,17,17,
 Unaltered time diff: 2.68333333333 min
 Duane Wilson commited to db
 
+Time now:2016,11,14,22,24,29,
+Time last log:2016,11,14,16,43,
+Unaltered time diff: 40.8666666667 min
+Teal Dowd commited to db
+
+Time now:2016,11,14,22,40,17,
+Time last log:2016,11,14,16,30,
+Unaltered time diff: 69.5 min
+Nate Mueller commited to db
+
+Time now:2016,11,15,12,20,31,
+Time last log:2016,11,14,17,40,
+Unaltered time diff: -619.766666667 min
+Error in time difference
+Nate Mueller commited to db
+
+Time now:2016,11,15,13,35,09,
+Time last log:2016,11,14,17,24,
+Unaltered time diff: -529.333333333 min
+Error in time difference
+Teal Dowd commited to db
+
+Time now:2016,11,15,13,56,02,
+Time last log:2016,11,15,8,35,
+Unaltered time diff: 20.85 min
+Teal Dowd commited to db
+
+Time now:2016,11,15,14,29,49,
+Time last log:2016,11,15,7,20,
+Unaltered time diff: 129.316666667 min
+Nate Mueller commited to db
+
+Time now:2016,11,15,15,05,07,
+Time last log:2016,11,15,9,29,
+Unaltered time diff: 35.3166666667 min
+Nate Mueller commited to db
+
+Time now:2016,11,15,15,23,11,
+Time last log:2016,11,15,8,56,
+Unaltered time diff: 87.15 min
+Teal Dowd commited to db
+
+Time now:2016,11,15,17,09,14,
+Time last log:2016,11,15,10,5,
+Unaltered time diff: 124.1 min
+Nate Mueller commited to db
+
+Time now:2016,11,15,17,27,50,
+Time last log:2016,11,15,10,23,
+Unaltered time diff: 124.65 min
+Teal Dowd commited to db
+
+Time now:2016,11,15,18,16,38,
+Time last log:2016,11,15,12,27,
+Unaltered time diff: 48.7833333333 min
+Teal Dowd commited to db
+
+Time now:2016,11,15,18,24,01,
+Time last log:2016,11,15,13,16,
+Unaltered time diff: 7.38333333333 min
+Teal Dowd commited to db
+
+Time now:2016,11,15,18,25,19,
+Time last log:2016,11,15,13,24,
+Unaltered time diff: 1.3 min
+Teal Dowd commited to db
+
+Time now:2016,11,15,18,28,12,
+Time last log:2016,11,15,12,9,
+Unaltered time diff: 78.9333333333 min
+Nate Mueller commited to db
+
+Time now:2016,11,15,19,55,08,
+Time last log:2016,11,15,13,28,
+Unaltered time diff: 86.9333333333 min
+Nate Mueller commited to db
+
+Time now:2016,11,15,21,11,25,
+Time last log:2016,11,15,13,52,
+Unaltered time diff: 139.0 min
+Teal Dowd commited to db
+
+Time now:2016,11,15,21,24,27,
+Time last log:2016,11,14,17,19,
+Unaltered time diff: -55.3666666667 min
+Error in time difference
+Duane Wilson commited to db
+
+Time now:2016,11,15,21,24,34,
+Time last log:2016,11,15,16,24,
+Unaltered time diff: 0.116666666667 min
+Duane Wilson commited to db
+
+Time now:2016,11,15,21,29,11,
+Time last log:2016,11,15,16,24,
+Unaltered time diff: 4.6 min
+Duane Wilson commited to db
+
+Getting projects failed. User not registered (or connection issue)
+Getting projects failed. User not registered (or connection issue)
+Getting projects failed. User not registered (or connection issue)
+Time now:2016,11,15,21,33,03,
+Time last log:2016,11,15,16,29,
+Unaltered time diff: 3.86666666667 min
+Duane Wilson commited to db
+
+Time now:2016,11,15,21,36,02,
+Time last log:2016,11,15,16,33,
+Unaltered time diff: 2.98333333333 min
+Duane Wilson commited to db
+
+Time now:2016,11,15,21,37,51,
+Time last log:2016,11,15,16,36,
+Unaltered time diff: 1.81666666667 min
+Duane Wilson commited to db
+
+Time now:2016,11,15,21,38,16,
+Time last log:2016,11,15,16,37,
+Unaltered time diff: 0.416666666667 min
+Duane Wilson commited to db
+
+Time now:2016,11,15,21,41,19,
+Time last log:2016,11,15,16,38,
+Unaltered time diff: 3.05 min
+Duane Wilson commited to db
+
+Time now:2016,11,15,21,43,26,
+Time last log:2016,11,15,16,41,
+Unaltered time diff: 2.11666666667 min
+Duane Wilson commited to db
+
+Time now:2016,11,15,21,44,41,
+Time last log:2016,11,15,16,43,
+Unaltered time diff: 1.25 min
+Duane Wilson commited to db
+
+Time now:2016,11,15,21,50,30,
+Time last log:2016,11,15,16,44,
+Unaltered time diff: 5.81666666667 min
+Duane Wilson commited to db
+
+Time now:2016,11,15,21,51,47,
+Time last log:2016,11,15,16,50,
+Unaltered time diff: 1.26666666667 min
+Duane Wilson commited to db
+
+Getting projects failed. User not registered (or connection issue)
+Error in time calc or first logHiIiIiI commited to db
+
+Time now:2016,11,15,21,54,42,
+Time last log:2016,11,15,16,54,
+Unaltered time diff: 0.0333333333333 min
+HiIiIiI commited to db
+
+Time now:2016,11,15,21,55,41,
+Time last log:2016,11,15,16,51,
+Unaltered time diff: 3.9 min
+Duane Wilson commited to db
+
+Time now:2016,11,15,21,56,40,
+Time last log:2016,11,15,16,55,
+Unaltered time diff: 0.983333333333 min
+Duane Wilson commited to db
+
+Time now:2016,11,15,21,58,10,
+Time last log:2016,11,15,16,56,
+Unaltered time diff: 1.5 min
+Duane Wilson commited to db
+
+Time now:2016,11,15,21,58,56,
+Time last log:2016,11,15,16,58,
+Unaltered time diff: 0.766666666667 min
+Duane Wilson commited to db
+
+Time now:2016,11,15,22,00,39,
+Time last log:2016,11,15,16,58,
+Unaltered time diff: 1.71666666667 min
+Duane Wilson commited to db
+
+Time now:2016,11,15,22,00,49,
+Time last log:2016,11,15,17,0,
+Unaltered time diff: 0.166666666667 min
+Duane Wilson commited to db
+
+Error in time calc or first logExample User commited to db
+
+Time now:2016,11,15,22,01,06,
+Time last log:2016,11,15,17,1,
+Unaltered time diff: 0.05 min
+Example User commited to db
+
+Time now:2016,11,15,22,01,11,
+Time last log:2016,11,15,17,1,
+Unaltered time diff: 0.0833333333333 min
+Example User commited to db
+
+Time now:2016,11,15,22,01,16,
+Time last log:2016,11,15,17,1,
+Unaltered time diff: 0.0666666666667 min
+Example User commited to db
+
