@@ -6,7 +6,7 @@ db = MySQLdb.connect("MUDDJ2-D1","RP","12345678","ichnaeadb")
 cursor = db.cursor()
 
 
-idnum = 136449740
+idnum = 13644974
 # find where id = id stored, and returns id name
 sql = "SELECT username FROM users WHERE rfidnum = '%d'" % (idnum)
 
