@@ -67,31 +67,35 @@ def readAndSave():
             var3 = str(uid[2])
             var4 = str(uid[3])
             ID = int(var1 + var2 + var3 + var4)
+
+            # check db for id
+            db = MySQLdb.connect("MUDDJ2-D1","RP","12345678","ichnaeadb")
+
+            cursor = db.cursor()
+
+            sql = "SELECT username FROM users WHERE rfidnum = '%d'" % (ID)
+
+            try:
+                # does the thing
+                cursor.execute(sql)
+                # fetch the username as a string
+                results = str(cursor.fetchone())
+                # cuts the ends by 2 and 3 respectivily to take off random trash
+                userName = results[2:-3]
+            except:
+                print "Error finding user"
+            # close db
+            db.close()
+
       
-            if ID in IDnumbers:
-
-                # get current time
-                date_time = str(datetime.now())
-
-                # Find name from list
-                tempNameLocal = IDnumbers.index(ID)
-                tempName = IDnames[tempNameLocal]
-
-                # Write username and time to end of file
-                with open('outputFile.txt','a') as outputFile:
-                    outputFile.write("\nUsername,%s,ID,%d," % (tempName, ID))
-                    outputFile.write("Login,%s," % date_time)
+            if userName:
 
                 # Print writing successful, and ask for project input
-                print "\n%s has been successfully logged in" % (tempName)
-
-                #pickProject.pick()
-
+                print "\n%s has been successfully logged in" % (userName)
 
                 continue_reading = False
-                outputFile.close()
                 
-                return tempName, ID
+                return userName, ID
 
             # If unknown ID number, then   
             else:

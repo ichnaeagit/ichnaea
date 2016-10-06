@@ -9,5 +9,5 @@
 
 cd /home/pi/ichnaeagit/
 
-sudo python TestGUI.py
+sudo python ichnaeaGUI.py
 
