@@ -7,7 +7,7 @@
 #/user/bin/python2.7 
 
 
-cd /home/pi/MFRC522-python/
+cd /home/pi/ichnaeagit/
 
 sudo python TestGUI.py
 
