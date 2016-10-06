@@ -29,12 +29,10 @@ while continuousRun:
             db = MySQLdb.connect("MUDDJ2-D1","RP","12345678","ichnaeadb")
 
             try:
-            
-
                 cursor = db.cursor()
                 args = (ID, project)
                 # Catches errors
-                query = "INSERT INTO logs(logid, logproject)" \
+                query = "INSERT INTO logs(clockNum, logproject)" \
                     "VALUES (%s,%s)"
 
                 cursor.execute(query, args)

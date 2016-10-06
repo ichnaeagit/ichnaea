@@ -5,11 +5,6 @@ import RPi.GPIO as GPIO
 import MFRC522
 import signal
 
-continue_reading = True
-
-#### make file to save
-out = open("test.dat","a")
-
 # Capture SIGINT for cleanup when the script is aborted
 def end_read(signal,frame):
     global continue_reading
@@ -28,7 +23,7 @@ print "Welcome to the MFRC522 data read example"
 print "Press Ctrl-C to stop."
 
 # This loop keeps checking for chips. If one is near it will get the UID and authenticate
-while continue_reading:
+while True:
     
     # Scan for cards    
     (status,TagType) = MIFAREReader.MFRC522_Request(MIFAREReader.PICC_REQIDL)
@@ -60,6 +55,4 @@ while continue_reading:
         if status == MIFAREReader.MI_OK:
             MIFAREReader.MFRC522_Read(8)
             MIFAREReader.MFRC522_StopCrypto1()
-        else:
             
-
