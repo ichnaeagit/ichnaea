@@ -63,9 +63,9 @@ while continuousRun:
 
         # Prints names
         nameLabel =tk.Label(root, textvariable=userName, font=("Helvetica",12))
-        nameLabel.pack()
+        nameLabel.grid()
         helpText = tk.Label(root, text='Please pick a project', fg="blue")
-        helpText.pack(side="top")
+        helpText.grid()
 
         #Get project names
         db = MySQLdb.connect("MUDDJ2-D1","RP","12345678","ichnaeadb")
@@ -82,33 +82,33 @@ while continuousRun:
 
         # Prints whichever projects people have, if they have them
         button01 = tk.Button(root,text = projects[4], bg="orange", command=lambda: saveinfo(ID,projects[4]), width = '50', height=3)
-        button01.pack(side="top")
+        button01.grid()
         if projects[5]:
             button02 = tk.Button(root,text=projects[5], bg="blue", fg='white',command=lambda:saveinfo(ID,projects[5]), width = '50',height=3)
-            button02.pack(pady=2)
+            button02.grid()
         if projects[6]:
             button03 = tk.Button(root,text=projects[6], bg="cyan", command=lambda: saveinfo(ID,projects[6]), width = '50',height=3)
-            button03.pack(pady=2)
+            button03.grid()
         if projects[7]:
             button04 = tk.Button(root,text=projects[7], bg="Yellow", command=lambda: saveinfo(ID,projects[7]), width = '50',height=3)
-            button04.pack(pady=2)
+            button04.grid()
         if projects[8]:
             button05 = tk.Button(root,text=projects[8], bg="red", command=lambda: saveinfo(ID,projects[8]), width = '50',height=3)
-            button05.pack(pady=2)
+            button05.grid()
         if projects[9]:
             button06 = tk.Button(root,text=projects[9], bg="orange", command=lambda: saveinfo(ID,projects[9]), width = '50',height=3)
-            button06.pack(pady=2)
+            button06.grid()
         if projects[10]:
             button07 = tk.Button(root,text=projects[10], bg="blue", command=lambda: saveinfo(ID,projects[10]), fg='white', width = '50',height=3)
-            button07.pack(pady=2)
+            button07.grid()
         if projects[11]:
             button08 = tk.Button(root,text=projects[11], bg="cyan", command=lambda: saveinfo(ID,projects[11]), width = '50',height=3)
-            button08.pack(pady=2)
+            button08.grid()
         if projects[12]:
             button09 = tk.Button(root,text=projects[12], bg="yellow", command=lambda: saveinfo(ID,projects[12]), width = '50',height=3)
-            button09.pack(pady=2)
+            button09.grid()
         button10 = tk.Button(root,text='Clock Off', bg="red", command=lambda: saveinfo(ID,"Clock Off"), width = '50',height=3)
-        button10.pack(pady=5)
+        button10.grid()
         
 
     class MainApplication(tk.Frame):
@@ -118,11 +118,12 @@ while continuousRun:
             root.geometry('600x900+350+50')
             #main GUI here
 
-            quitButton = tk.Button(root, text='Quit program', bg="red", fg ="black",height=1,font=("Helvetica",9), command = quitProgram)
-            quitButton.pack(pady=1)
+
+            quitButton = tk.Button(root, text='Quit program', bg="red", fg ="black",height=1,width=85,font=("Helvetica",9), command = quitProgram)
+            quitButton.grid()
 
             welcomeText = tk.Label(root, text="Ichnaea time tracking Beta\n V0.0.1", font=("papyrus",12), fg="blue", width=20)
-            welcomeText.pack(pady=5)
+            welcomeText.grid()
 
             helpText = tk.StringVar()
             helpText.set('Swipe until project picker appears')
@@ -131,10 +132,10 @@ while continuousRun:
             #scanButton.pack(padx=5, pady=3)
 
             scanCard = tk.Label(root, text="Please Scan Card", font=("papyrus",24), fg="red", width=20)
-            scanCard.pack(pady=10)
+            scanCard.grid(row=3, column=0,columnspan=2,pady=10)
             
             feedbackLabel = tk.Label(root, textvariable=helpText, fg="blue")
-            feedbackLabel.pack(pady=5)
+            feedbackLabel.grid()
             
             root.after(500, buttonPressed)
 
