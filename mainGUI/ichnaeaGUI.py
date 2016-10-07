@@ -239,13 +239,18 @@ def buttonPressed():
     # Create buttons
     projects = projects[4:]
     # For each valid project
-    i = int(1)
+    i = int(1) # variable for color changing
     for project in projects:
-        if str(project) == "None": break # breaks if no project
+
+        project = str(project) # changes the project to a string
+
+        if project == "None": break # breaks if no project
+
         # Create button with given label, and alternate colors
         # pad size changes from above
+        # project = project saves the specific instance of project to the given button
         tk.Button(root,text = project, \
-            bg= ("RoyalBlue1" if i % 2 else "turquoise4"),  command=lambda: \
+            bg= ("RoyalBlue1" if i % 2 else "turquoise4"),  command=lambda project = project: \
             saveinfo(ID,project,name),  \
             width = '20', height=1, font = ("Helvetica", 24)) \
             .grid(pady=padSize)

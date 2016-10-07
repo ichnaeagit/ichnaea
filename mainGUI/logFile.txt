@@ -2055,3 +2055,48 @@ Time last log:2016,11,21,15,36,
 Unaltered time diff: 5.75 min
 Example User commited to db
 
+Time now:2016,11,21,20,53,48,
+Time last log:2016,11,18,11,21,
+Unaltered time diff: 272.133333333 min
+Duane Wilson commited to db
+
+Time now:2016,11,21,20,53,57,
+Time last log:2016,11,21,15,53,
+Unaltered time diff: 0.166666666667 min
+Duane Wilson commited to db
+
+Time now:2016,11,21,20,54,41,
+Time last log:2016,11,21,15,53,
+Unaltered time diff: 0.733333333333 min
+Duane Wilson commited to db
+
+Time now:2016,11,21,20,54,52,
+Time last log:2016,11,21,15,54,
+Unaltered time diff: 0.166666666667 min
+Duane Wilson commited to db
+
+Time now:2016,11,21,20,55,06,
+Time last log:2016,11,21,15,54,
+Unaltered time diff: 0.233333333333 min
+Duane Wilson commited to db
+
+Time now:2016,11,21,20,55,37,
+Time last log:2016,11,21,15,55,
+Unaltered time diff: 0.516666666667 min
+Duane Wilson commited to db
+
+Time now:2016,11,21,20,56,07,
+Time last log:2016,11,21,15,55,
+Unaltered time diff: 0.516666666667 min
+Duane Wilson commited to db
+
+Time now:2016,11,21,20,56,15,
+Time last log:2016,11,21,15,56,
+Unaltered time diff: 0.133333333333 min
+Duane Wilson commited to db
+
+Time now:2016,11,21,20,56,21,
+Time last log:2016,11,21,15,56,
+Unaltered time diff: 0.1 min
+Duane Wilson commited to db
+
