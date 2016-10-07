@@ -200,8 +200,8 @@ def saveinfo(ID, project, userName):
 
 def buttonPressed():
     print 'Please scan your card'
-    project = int()
-    project = 0
+    projects = []
+    project = int(0)
 
     # Run program to scan card info to file
     name, ID = cardRead()
@@ -237,15 +237,16 @@ def buttonPressed():
     if projects[10]: padSize = 2
     
     # Create buttons
-    i=int(4)
-    while projects[i]: # For each valid project
-
+    projects = projects[4:]
+    # For each valid project
+    i = int(1)
+    for project in projects:
+        if str(project) == "None": break # breaks if no project
         # Create button with given label, and alternate colors
-        # the i=i makes each button get a unique callback
         # pad size changes from above
-        tk.Button(root,text = projects[i], \
-            bg= ("RoyalBlue1" if i % 2 else "turquoise4"),  command=lambda i=i: \
-            saveinfo(ID,projects[i],name),  \
+        tk.Button(root,text = project, \
+            bg= ("RoyalBlue1" if i % 2 else "turquoise4"),  command=lambda: \
+            saveinfo(ID,project,name),  \
             width = '20', height=1, font = ("Helvetica", 24)) \
             .grid(pady=padSize)
 
