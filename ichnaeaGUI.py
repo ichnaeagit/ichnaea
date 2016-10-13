@@ -55,60 +55,67 @@ while continuousRun:
 
         # Run program to scan card info to file
         name, ID = cardRead.readAndSave()
-        
-        userName = tk.StringVar()
-        tempName = 'Hello '
-        tempName +=name        
-        userName.set(tempName)
 
-        # Prints names
-        nameLabel =tk.Label(root, textvariable=userName, font=("Helvetica",12))
-        nameLabel.grid()
-        helpText = tk.Label(root, text='Please pick a project', fg="blue")
-        helpText.grid()
+        # Only runs rest of code if there is a valid ID optained
+        if ID:
+            userName = tk.StringVar()
+            tempName = 'Hello '
+            tempName +=name        
+            userName.set(tempName)
+            userName='Please try again'
 
-        #Get project names
-        db = MySQLdb.connect("MUDDJ2-D1","RP","12345678","ichnaeadb")
-        cursor = db.cursor()
-        projectSearch = "SELECT * FROM users WHERE clocknum = '%d'" % (ID)
-        try:
-            # does the thing
-            cursor.execute(projectSearch)
-            # fetch the username as a string
-            projects = cursor.fetchone()
-        except:
-            print "Getting projects failed"
-        db.close()
+            # Prints names
+            nameLabel =tk.Label(root, textvariable=userName, font=("Helvetica",12))
+            nameLabel.grid()
+            helpText = tk.Label(root, text='Please pick a project', fg="blue")
+            helpText.grid()
 
-        # Prints whichever projects people have, if they have them
-        button01 = tk.Button(root,text = projects[4], bg="orange", command=lambda: saveinfo(ID,projects[4]), width = '50', height=3)
-        button01.grid()
-        if projects[5]:
-            button02 = tk.Button(root,text=projects[5], bg="blue", fg='white',command=lambda:saveinfo(ID,projects[5]), width = '50',height=3)
-            button02.grid()
-        if projects[6]:
-            button03 = tk.Button(root,text=projects[6], bg="cyan", command=lambda: saveinfo(ID,projects[6]), width = '50',height=3)
-            button03.grid()
-        if projects[7]:
-            button04 = tk.Button(root,text=projects[7], bg="Yellow", command=lambda: saveinfo(ID,projects[7]), width = '50',height=3)
-            button04.grid()
-        if projects[8]:
-            button05 = tk.Button(root,text=projects[8], bg="red", command=lambda: saveinfo(ID,projects[8]), width = '50',height=3)
-            button05.grid()
-        if projects[9]:
-            button06 = tk.Button(root,text=projects[9], bg="orange", command=lambda: saveinfo(ID,projects[9]), width = '50',height=3)
-            button06.grid()
-        if projects[10]:
-            button07 = tk.Button(root,text=projects[10], bg="blue", command=lambda: saveinfo(ID,projects[10]), fg='white', width = '50',height=3)
-            button07.grid()
-        if projects[11]:
-            button08 = tk.Button(root,text=projects[11], bg="cyan", command=lambda: saveinfo(ID,projects[11]), width = '50',height=3)
-            button08.grid()
-        if projects[12]:
-            button09 = tk.Button(root,text=projects[12], bg="yellow", command=lambda: saveinfo(ID,projects[12]), width = '50',height=3)
-            button09.grid()
-        button10 = tk.Button(root,text='Clock Off', bg="red", command=lambda: saveinfo(ID,"Clock Off"), width = '50',height=3)
-        button10.grid()
+            #Get project names
+            try:
+                db = MySQLdb.connect("MUDDJ2-D1","RP","12345678","ichnaeadb")
+                cursor = db.cursor()
+                projectSearch = "SELECT * FROM users WHERE clocknum = '%d'" % (ID)
+                # does the thing
+                cursor.execute(projectSearch)
+                # fetch the username as a string
+                projects = cursor.fetchone()
+                db.close()
+            except:
+                print "Getting projects failed"
+                tkMessageBox.showwarning("header", "Failed to connect to database.\n Check ethernet cord, then try again. \n\nContact Teal")
+
+
+
+            # Prints whichever projects people have, if they have them
+            button01 = tk.Button(root,text = projects[4], bg="orange", command=lambda: saveinfo(ID,projects[4]), width = '50', height=3)
+            button01.grid()
+            if projects[5]:
+                button02 = tk.Button(root,text=projects[5], bg="blue", fg='white',command=lambda:saveinfo(ID,projects[5]), width = '50',height=3)
+                button02.grid()
+            if projects[6]:
+                button03 = tk.Button(root,text=projects[6], bg="cyan", command=lambda: saveinfo(ID,projects[6]), width = '50',height=3)
+                button03.grid()
+            if projects[7]:
+                button04 = tk.Button(root,text=projects[7], bg="Yellow", command=lambda: saveinfo(ID,projects[7]), width = '50',height=3)
+                button04.grid()
+            if projects[8]:
+                button05 = tk.Button(root,text=projects[8], bg="red", command=lambda: saveinfo(ID,projects[8]), width = '50',height=3)
+                button05.grid()
+            if projects[9]:
+                button06 = tk.Button(root,text=projects[9], bg="orange", command=lambda: saveinfo(ID,projects[9]), width = '50',height=3)
+                button06.grid()
+            if projects[10]:
+                button07 = tk.Button(root,text=projects[10], bg="blue", command=lambda: saveinfo(ID,projects[10]), fg='white', width = '50',height=3)
+                button07.grid()
+            if projects[11]:
+                button08 = tk.Button(root,text=projects[11], bg="cyan", command=lambda: saveinfo(ID,projects[11]), width = '50',height=3)
+                button08.grid()
+            if projects[12]:
+                button09 = tk.Button(root,text=projects[12], bg="yellow", command=lambda: saveinfo(ID,projects[12]), width = '50',height=3)
+                button09.grid()
+            button10 = tk.Button(root,text='Clock Off', bg="red", command=lambda: saveinfo(ID,"Clock Off"), width = '50',height=3)
+            button10.grid()
+        else: root.destroy()
         
 
     class MainApplication(tk.Frame):

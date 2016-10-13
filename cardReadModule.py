@@ -6,6 +6,7 @@ import MFRC522
 import signal
 import sys
 import MySQLdb
+import tkMessageBox
 
 def readAndSave():
 
@@ -40,17 +41,19 @@ def readAndSave():
             var3 = str(uid[2])
             var4 = str(uid[3])
             ID = int(var1 + var2 + var3 + var4)
+
+            userName = 'failed db connect'
+            userClockNum = 00000
             
-
-            # check db for id
-            db = MySQLdb.connect("MUDDJ2-D1","RP","12345678","ichnaeadb")
-
-            cursor = db.cursor()
-
-            userNameSearch = "SELECT username FROM users WHERE rfidnum = '%d'" % (ID)
-            clockNumSearch = "SELECT clocknum FROM users WHERE rfidnum = '%d'" % (ID)
-
             try:
+                # check db for id
+                db = MySQLdb.connect("MUDDJ2-D1","RP","12345678","ichnaeadb")
+
+                cursor = db.cursor()
+
+                userNameSearch = "SELECT username FROM users WHERE rfidnum = '%d'" % (ID)
+                clockNumSearch = "SELECT clocknum FROM users WHERE rfidnum = '%d'" % (ID)
+
                 # does the thing
                 cursor.execute(userNameSearch)
                 # fetch the username as a string
@@ -61,20 +64,16 @@ def readAndSave():
                 cursor.execute(clockNumSearch)
                 userClockNum = str(cursor.fetchone())
                 userClockNum = int(userClockNum[1:-3])
+                db.close()
             except:
                 print "Error finding user"
-            # close db
-            db.close()
+                tkMessageBox.showwarning("header", "Failed to write to database. \n Check ethernet and try again.\n\nContact Teal")
 
-      
-            if userName:
+            if userClockNum:
 
                 # Print writing successful, and ask for project input
                 print "\n%s has been successfully logged in" % (userName)
                 
-                return userName, userClockNum
+            return userName, userClockNum
 
-            # If unknown ID number, then   
-            else:
-                print "Unkown id"
-
+    
