@@ -4,6 +4,7 @@ import cardReadModule as cardRead
 import sys
 import MySQLdb
 import time
+import readID
 
 
 
@@ -55,7 +56,8 @@ while continuousRun:
 
         # Run program to scan card info to file
         name, ID = cardRead.readAndSave()
-
+        # ID2 = readID.read()
+    
         # Only runs rest of code if there is a valid ID optained
         if ID:
             userName = tk.StringVar()
