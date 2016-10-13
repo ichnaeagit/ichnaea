@@ -7,7 +7,7 @@
 #/user/bin/python2.7 
 
 
-cd /home/pi/ichnaeagit/
+cd /home/pi/ichnaeagit/mainGUI
 
 sudo python ichnaeaGUI.py
 
