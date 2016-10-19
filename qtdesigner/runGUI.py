@@ -1,5 +1,6 @@
 from PyQt4 import QtGui # Import the PyQt4 module we'll need
 import sys # We need sys so that we can pass argv to QApplication
+import graphTime
 
 import design # This file holds our MainWindow and all design related things
               # it also keeps events etc that we defined in Qt Designer
@@ -13,10 +14,30 @@ class ExampleApp(QtGui.QMainWindow, design.Ui_MainWindow):
         super(self.__class__, self).__init__()
         self.setupUi(self)  # This is defined in design.py file automatically
                             # It sets up layout and widgets that are defined
-        self.genReport.clicked.connect(self.getData)
+        self.genReport.clicked.connect(self.createReport)
+        
 
-    def getData(self):
+    def createReport(self):
+        # sets durration for report
+        if self.weekRad.isChecked():
+            durr = 1
+        if self.monthRad.isChecked():
+            durr = 4
+        if self.allRad.isChecked():
+            durr = 0
+        # Sets scope of report
+
+        if self.PE.isChecked():
+            group = "PE"
+        else:
+            print "you must pick a group"
+            return 
+
+
         print "clicked!"
+
+        graphTime.graph(durr, group)
+
 
 
 def main():
