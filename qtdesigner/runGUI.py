@@ -13,6 +13,10 @@ class ExampleApp(QtGui.QMainWindow, design.Ui_MainWindow):
         super(self.__class__, self).__init__()
         self.setupUi(self)  # This is defined in design.py file automatically
                             # It sets up layout and widgets that are defined
+        self.genReport.clicked.connect(self.getData)
+
+    def getData(self):
+        print "clicked!"
 
 
 def main():
