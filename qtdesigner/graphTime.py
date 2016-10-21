@@ -1,30 +1,5 @@
 import sys
 import MySQLdb
-import tkMessageBox
-
-db = MySQLdb.connect("MUDDJ2-D1","RP","12345678","ichnaeadb")
-
-
-def countUsers():
-    try:
-        #connect SQL database
-        db = MySQLdb.connect("MUDDJ2-D1","RP","12345678","ichnaeadb")
-
-        #set cursor
-        cursor = db.cursor()
-
-        #finds number of users
-        cursor.execute("SELECT COUNT(username) FROM users")
-        result = str(cursor.fetchall()) #fetches as a string
-        numOfUsers = int(result[2:-5]) #cuts it down to only a number
-    
-        return numOfUsers
-        db.close()
-            
-    except:
-        db.close()
-        print("Failed to count users from db")
-        sys.exit()
 
 def getGraphInfo(allUsers):
     graphLogs = []
@@ -62,15 +37,16 @@ def getGraphInfo(allUsers):
                 # takes array of durration, sums
                 time = float(0)
                 for t in durr:
+
+                    # For times when the time is null, etc
                     try:
                         time = time + float(t)
                     except:
                         time = time
-                print time
+
                 graphLogs.append(time) #saves clocked time in (hours?)
 
                 db.close()
-       
             except:
                 db.close()
                 print "error!"
@@ -78,7 +54,7 @@ def getGraphInfo(allUsers):
     return graphLogs
     
 
-def getUsers(groups):
+def getUsers(groups, scope):
 
     #Saves RFID numbers for each person in the selected groups
 
@@ -115,15 +91,13 @@ def getUsers(groups):
 #
 #
 #
-#
 # ---- main ----
 #scope is how many weeks to collect from (1 = up to 1 week from today)
 #groups is the string of the group (e.g. "PE")
 
 def graph(scope,groups):
-    #numOfUsers = countUsers()
 
-    allUsers = getUsers(groups)
+    allUsers = getUsers(groups, scope)
 
     graphInfo = getGraphInfo(allUsers)
 
