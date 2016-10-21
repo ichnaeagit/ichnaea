@@ -39,7 +39,6 @@ class ExampleApp(QtGui.QMainWindow, design.Ui_MainWindow):
         graphTime.graph(durr, group)
 
 
-
 def main():
     app = QtGui.QApplication(sys.argv)  # A new instance of QApplication
     form = ExampleApp()                 # We set the form to be our ExampleApp (design)

@@ -1,5 +1,8 @@
 import sys
 import MySQLdb
+import matplotlib.pyplot as plt
+import numpy as np
+import matplotlib.pyplot as plt
 
 def getGraphInfo(allUsers, scope):
     graphLogs = []
@@ -88,6 +91,24 @@ def getUsers(groups):
     # returns 2d array of clock numbers which are within criteria, segregated by group 
     return users
 
+def graphData(graphInfo):
+
+    barNames = []
+    durrations = []
+    for name in graphInfo:
+        if isinstance(name, basestring): barNames.append(str(name))
+        else: durrations.append(float(name))
+
+    #y_pos = np.arange(len(objects))
+    y_pos =np.arange(len(barNames))
+    performance = [1, 2,3,4,5]
+
+    plt.bar(y_pos, durrations, align = 'center', alpha = 0.5)
+    plt.xticks(y_pos, barNames)
+    plt.title("Time plot")
+    plt.show()
+    
+
 #
 #
 #
@@ -97,13 +118,18 @@ def getUsers(groups):
 
 def graph(scope,groups):
 
+    print scope
+    print groups
+
     allUsers = getUsers(groups)
 
     graphInfo = getGraphInfo(allUsers, scope)
 
+    graphData(graphInfo)
 
     print graphInfo
 
+    
 
 if __name__ == '__main__':
     graph(3,["PE","QE"])
