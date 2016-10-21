@@ -1,7 +1,7 @@
 import sys
 import MySQLdb
 
-def getGraphInfo(allUsers):
+def getGraphInfo(allUsers, scope):
     graphLogs = []
 
     # for every user in the list of all available users (broken down by group)
@@ -16,8 +16,8 @@ def getGraphInfo(allUsers):
                 db = MySQLdb.connect("MUDDJ2-D1","RP","12345678","ichnaeadb")
                 cursor = db.cursor()
 
-                # creates queries, based on clock numbers
-                getDurr = "SELECT logdurr FROM logs WHERE clockNum = '%d'" % (user)
+                # creates queries, based on clock numbers and time scope in weeks
+                getDurr = "SELECT logdurr FROM logs WHERE clockNum = '%d' AND logtime > CURRENT_DATE - INTERVAL '%d' WEEK" % (user, scope)
                 getName = "SELECT username FROM users WHERE clockNum = '%d'" % (user)
 
                 # Get the username of the person, for easy graphing
@@ -54,10 +54,10 @@ def getGraphInfo(allUsers):
     return graphLogs
     
 
-def getUsers(groups, scope):
+def getUsers(groups):
 
     #Saves RFID numbers for each person in the selected groups
-
+    
     users = []
 
     for group in groups:
@@ -67,7 +67,7 @@ def getUsers(groups, scope):
             db = MySQLdb.connect("MUDDJ2-D1","RP","12345678","ichnaeadb")
             cursor = db.cursor()
 
-            query = "SELECT clocknum FROM users WHERE groupname = '%s'" % (group)
+            query = "SELECT clocknum FROM users WHERE groupname = '%s' " % (group)
             cursor.execute(query)
             result = str(cursor.fetchall()) #fetches data
             result = result[1:-1]   #cuts off end shit
@@ -97,15 +97,15 @@ def getUsers(groups, scope):
 
 def graph(scope,groups):
 
-    allUsers = getUsers(groups, scope)
+    allUsers = getUsers(groups)
 
-    graphInfo = getGraphInfo(allUsers)
+    graphInfo = getGraphInfo(allUsers, scope)
 
 
     print graphInfo
 
 
 if __name__ == '__main__':
-    graph(1,["PE","QE"])
+    graph(3,["PE","QE"])
     #graph(1,["PE"])
     
