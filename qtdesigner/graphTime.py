@@ -19,8 +19,12 @@ def getGraphInfo(allUsers, scope):
                 db = MySQLdb.connect("MUDDJ2-D1","RP","12345678","ichnaeadb")
                 cursor = db.cursor()
 
-                # creates queries, based on clock numbers and time scope in weeks
-                getDurr = "SELECT logdurr FROM logs WHERE clockNum = '%d' AND logtime > CURRENT_DATE - INTERVAL '%d' WEEK" % (user, scope)
+                # creates queries, based on clock numbers and time scope in weeks. If scope = 0, take all time data
+                if scope != 0:
+                    getDurr = "SELECT logdurr FROM logs WHERE clockNum = '%d' AND logtime > CURRENT_DATE - INTERVAL '%d' WEEK" % (user, scope)
+                else:
+                    getDurr = "SELECT logdurr FROM logs WHERE clockNum = '%d'" % (user)
+
                 getName = "SELECT username FROM users WHERE clockNum = '%d'" % (user)
 
                 # Get the username of the person, for easy graphing
@@ -53,7 +57,7 @@ def getGraphInfo(allUsers, scope):
             except:
                 db.close()
                 print "error!"
-
+    
     return graphLogs
     
 
@@ -63,9 +67,10 @@ def getUsers(groups):
     
     users = []
 
+    #print groups
+    
     for group in groups:
 
-        
         try:
             db = MySQLdb.connect("MUDDJ2-D1","RP","12345678","ichnaeadb")
             cursor = db.cursor()
@@ -73,6 +78,9 @@ def getUsers(groups):
             query = "SELECT clocknum FROM users WHERE groupname = '%s' " % (group)
             cursor.execute(query)
             result = str(cursor.fetchall()) #fetches data
+
+            #print group
+            
             result = result[1:-1]   #cuts off end shit
             result = result.split() #cuts into bit
             result = [s.strip('L,)') for s in result]   #strips out shit
@@ -99,9 +107,8 @@ def graphData(graphInfo):
         if isinstance(name, basestring): barNames.append(str(name))
         else: durrations.append(float(name))
 
-    #y_pos = np.arange(len(objects))
-    y_pos =np.arange(len(barNames))
-    performance = [1, 2,3,4,5]
+    y_pos = np.arange(len(barNames))
+
 
     plt.bar(y_pos, durrations, align = 'center', alpha = 0.5)
     plt.xticks(y_pos, barNames)
@@ -118,20 +125,21 @@ def graphData(graphInfo):
 
 def graph(scope,groups):
 
-    print scope
-    print groups
-
     allUsers = getUsers(groups)
+
+    #print allUsers
 
     graphInfo = getGraphInfo(allUsers, scope)
 
+    #print graphInfo
+
     graphData(graphInfo)
 
-    print graphInfo
+    #print graphInfo
 
     
 
 if __name__ == '__main__':
-    graph(3,["PE","QE"])
+    graph(0,["PE","QE"])
     #graph(1,["PE"])
     

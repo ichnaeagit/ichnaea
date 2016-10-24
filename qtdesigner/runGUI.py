@@ -28,7 +28,7 @@ class ExampleApp(QtGui.QMainWindow, design.Ui_MainWindow):
         # Sets scope of report
 
         if self.PE.isChecked():
-            group = "PE"
+            group = ["PE"]
         else:
             print "you must pick a group"
             return 
