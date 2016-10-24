@@ -40,6 +40,7 @@ def readAndSave():
             var2 = str(uid[1])
             var3 = str(uid[2])
             var4 = str(uid[3])
+
             ID = int(var1 + var2 + var3 + var4)
 
             userName = 'failed db connect'
@@ -67,7 +68,7 @@ def readAndSave():
                 db.close()
             except:
                 print "Error finding user"
-                tkMessageBox.showwarning("header", "Failed to write to database. \n Check ethernet and try again.\n\nContact Teal")
+                tkMessageBox.showwarning("header", "Failed to write to database. \n Check ethernet or if user is registered and try again.\n\nContact Teal")
 
             if userClockNum:
 

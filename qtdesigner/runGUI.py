@@ -15,7 +15,6 @@ class ExampleApp(QtGui.QMainWindow, design.Ui_MainWindow):
         self.setupUi(self)  # This is defined in design.py file automatically
                             # It sets up layout and widgets that are defined
         self.genReport.clicked.connect(self.createReport)
-        
 
     def createReport(self):
         # sets durration for report

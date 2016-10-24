@@ -59,7 +59,7 @@ while continuousRun:
         # ID2 = readID.read()
     
         # Only runs rest of code if there is a valid ID optained
-        if ID:
+        if ID != "None":
             userName = tk.StringVar()
             tempName = 'Hello '
             tempName +=name        
