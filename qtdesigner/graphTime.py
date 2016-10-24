@@ -108,11 +108,10 @@ def graphData(graphInfo):
         else: durrations.append(float(name))
 
     y_pos = np.arange(len(barNames))
-
-
     plt.bar(y_pos, durrations, align = 'center', alpha = 0.5)
     plt.xticks(y_pos, barNames)
-    plt.title("Time plot")
+    plt.title("Time plot by user")
+    plt.ylabel('Minutes')
     plt.show()
     
 
@@ -127,17 +126,9 @@ def graph(scope,groups):
 
     allUsers = getUsers(groups)
 
-    #print allUsers
-
     graphInfo = getGraphInfo(allUsers, scope)
 
-    #print graphInfo
-
-    graphData(graphInfo)
-
-    #print graphInfo
-
-    
+    graphData(graphInfo)   
 
 if __name__ == '__main__':
     graph(0,["PE","QE"])
