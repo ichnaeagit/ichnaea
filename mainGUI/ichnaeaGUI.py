@@ -68,6 +68,10 @@ while continuousRun:
             # if they don't log off, give them them 360min
             if dayDiff or monthDiff or yearDiff:
                timeDiffMin = 360
+
+            # make sure to not count time off
+            if loggedProject == "Clock Off":
+                timeDiffMin = 0
             
             db.close()
         except:
@@ -94,37 +98,6 @@ while continuousRun:
             db.rollback()
             db.close()
 
-
-                
-
-##        # Save clocknum, project, and timestamp to db
-##        try:
-##            #write to SQL database
-##            db = MySQLdb.connect("MUDDJ2-D1","RP","12345678","ichnaeadb")
-##
-##            try:
-##                cursor = db.cursor()
-##                args = (ID, project)
-##                # Catches errors
-##                query = "INSERT INTO logs(clockNum, logproject)" \
-##                    "VALUES (%s,%s)"
-##
-##                cursor.execute(query, args)
-##
-##                db.commit()
-##                print("Committed to DB")
-##                db.close()
-##            
-##            except:
-##                db.rollback()
-##                db.close()
-##                print("Failled to write to DB")
-##                tkMessageBox.showwarning("header", "Failed to write to database. \n\nContact Teal")
-##
-##        except:
-##            print("Failed connect to db")
-##            tkMessageBox.showwarning("header", "Failed to connect to database.\n\nCheck ethernet cord, or contact Teal")        
-##        
         root.destroy()
 
     def buttonPressed():
