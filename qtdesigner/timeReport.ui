@@ -14,172 +14,159 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <layout class="QVBoxLayout" name="verticalLayout_3">
-    <item>
-     <layout class="QHBoxLayout" name="horizontalLayout_6">
+   <layout class="QGridLayout" name="gridLayout_2">
+    <item row="0" column="0">
+     <layout class="QVBoxLayout" name="verticalLayout">
       <item>
-       <layout class="QVBoxLayout" name="verticalLayout">
+       <widget class="QPushButton" name="genReport">
+        <property name="text">
+         <string>Graph all users per group</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_2">
         <item>
-         <widget class="QPushButton" name="genReport">
+         <widget class="QCheckBox" name="PE">
+          <property name="layoutDirection">
+           <enum>Qt::LeftToRight</enum>
+          </property>
           <property name="text">
-           <string>Graph all users per group</string>
+           <string>PE group</string>
           </property>
          </widget>
         </item>
         <item>
-         <layout class="QHBoxLayout" name="horizontalLayout_2">
-          <item>
-           <widget class="QCheckBox" name="PE">
-            <property name="layoutDirection">
-             <enum>Qt::LeftToRight</enum>
-            </property>
-            <property name="text">
-             <string>PE group</string>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QCheckBox" name="QE">
-            <property name="layoutDirection">
-             <enum>Qt::LeftToRight</enum>
-            </property>
-            <property name="text">
-             <string>QE Group</string>
-            </property>
-           </widget>
-          </item>
-         </layout>
-        </item>
-        <item>
-         <layout class="QHBoxLayout" name="horizontalLayout">
-          <item>
-           <widget class="QRadioButton" name="weekRad">
-            <property name="text">
-             <string>Current week</string>
-            </property>
-            <property name="checked">
-             <bool>true</bool>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QRadioButton" name="monthRad">
-            <property name="text">
-             <string>Current month</string>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QRadioButton" name="allRad">
-            <property name="text">
-             <string>All time</string>
-            </property>
-           </widget>
-          </item>
-         </layout>
+         <widget class="QCheckBox" name="QE">
+          <property name="layoutDirection">
+           <enum>Qt::LeftToRight</enum>
+          </property>
+          <property name="text">
+           <string>QE Group</string>
+          </property>
+         </widget>
         </item>
        </layout>
       </item>
       <item>
-       <layout class="QVBoxLayout" name="verticalLayout_2">
+       <layout class="QHBoxLayout" name="horizontalLayout">
         <item>
-         <widget class="QPushButton" name="genReport_2">
+         <widget class="QRadioButton" name="weekRad">
           <property name="text">
-           <string>Graph individual users by project</string>
+           <string>Current week</string>
+          </property>
+          <property name="checked">
+           <bool>true</bool>
           </property>
          </widget>
         </item>
         <item>
-         <layout class="QHBoxLayout" name="horizontalLayout_4">
-          <item>
-           <widget class="QCheckBox" name="PE_2">
-            <property name="layoutDirection">
-             <enum>Qt::LeftToRight</enum>
-            </property>
-            <property name="text">
-             <string>PE group</string>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QCheckBox" name="QE_2">
-            <property name="layoutDirection">
-             <enum>Qt::LeftToRight</enum>
-            </property>
-            <property name="text">
-             <string>QE Group</string>
-            </property>
-           </widget>
-          </item>
-         </layout>
+         <widget class="QRadioButton" name="monthRad">
+          <property name="text">
+           <string>Current month</string>
+          </property>
+         </widget>
         </item>
         <item>
-         <layout class="QHBoxLayout" name="horizontalLayout_5">
-          <item>
-           <widget class="QRadioButton" name="weekRad_2">
-            <property name="text">
-             <string>Current week</string>
-            </property>
-            <property name="checked">
-             <bool>true</bool>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QRadioButton" name="monthRad_2">
-            <property name="text">
-             <string>Current month</string>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QRadioButton" name="allRad_2">
-            <property name="text">
-             <string>All time</string>
-            </property>
-           </widget>
-          </item>
-         </layout>
+         <widget class="QRadioButton" name="allRad">
+          <property name="text">
+           <string>All time</string>
+          </property>
+         </widget>
         </item>
        </layout>
       </item>
      </layout>
     </item>
-    <item>
+    <item row="0" column="1">
+     <layout class="QVBoxLayout" name="verticalLayout_2">
+      <item>
+       <widget class="QPushButton" name="genReport_2">
+        <property name="text">
+         <string>Graph individual users by project</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_4">
+        <item>
+         <widget class="QCheckBox" name="QE_2">
+          <property name="layoutDirection">
+           <enum>Qt::LeftToRight</enum>
+          </property>
+          <property name="text">
+           <string>QE Group</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="PE_2">
+          <property name="layoutDirection">
+           <enum>Qt::LeftToRight</enum>
+          </property>
+          <property name="text">
+           <string>PE group</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_5">
+        <item>
+         <widget class="QRadioButton" name="allRad_3">
+          <property name="text">
+           <string>Current Week</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QRadioButton" name="allRad_2">
+          <property name="text">
+           <string>Current Month</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QRadioButton" name="monthRad_2">
+          <property name="text">
+           <string>Current Week</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+    <item row="1" column="0" colspan="2">
      <layout class="QGridLayout" name="gridLayout">
+      <item row="0" column="1">
+       <widget class="QListWidget" name="mlpfigs"/>
+      </item>
       <item row="1" column="0">
-       <widget class="QListWidget" name="mplwindow">
+       <widget class="QWidget" name="mpwindow" native="true">
+        <layout class="QVBoxLayout" name="mplvl"/>
+       </widget>
+      </item>
+      <item row="0" column="0">
+       <widget class="QListWidget" name="mplfigs">
         <property name="minimumSize">
          <size>
           <width>0</width>
-          <height>200</height>
+          <height>20</height>
          </size>
         </property>
        </widget>
       </item>
       <item row="1" column="1">
-       <widget class="QListWidget" name="mplwindow_2"/>
-      </item>
-      <item row="0" column="0">
-       <widget class="QWidget" name="mplfigs" native="true">
+       <widget class="QWidget" name="mplwindow" native="true">
         <property name="minimumSize">
          <size>
           <width>0</width>
-          <height>50</height>
+          <height>400</height>
          </size>
         </property>
-        <layout class="QVBoxLayout" name="verticalLayout_4"/>
-       </widget>
-      </item>
-      <item row="0" column="1">
-       <widget class="QWidget" name="mplfigs_2" native="true">
-        <property name="minimumSize">
-         <size>
-          <width>0</width>
-          <height>50</height>
-         </size>
-        </property>
-        <layout class="QVBoxLayout" name="verticalLayout_5"/>
+        <layout class="QVBoxLayout" name="mplvl_2"/>
        </widget>
       </item>
      </layout>

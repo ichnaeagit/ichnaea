@@ -128,7 +128,9 @@ def graph(scope,groups):
 
     graphInfo = getGraphInfo(allUsers, scope)
 
-    graphData(graphInfo)   
+    graphData(graphInfo)
+
+    return graphInfo
 
 if __name__ == '__main__':
     graph(0,["PE","QE"])
