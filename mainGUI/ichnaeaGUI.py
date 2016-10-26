@@ -174,11 +174,11 @@ while continuousRun:
         def __init__(self,parent, *args, **kwargs):
             tk.Frame.__init__(self,parent, *args, **kwargs)
             self.parent = parent
-            root.geometry('600x900+350+50')
+            root.geometry('475x750+0+0')
             #main GUI here
 
 
-            quitButton = tk.Button(root, text='Quit program', bg="red", fg ="black",height=1,width=85,font=("Helvetica",9), command = quitProgram)
+            quitButton = tk.Button(root, text='Quit program', bg="red", fg ="black",height=1,width=65,font=("Helvetica",9), command = quitProgram)
             quitButton.grid()
 
             welcomeText = tk.Label(root, text="Ichnaea time tracking Beta\n V0.0.1", font=("papyrus",12), fg="blue", width=20)
