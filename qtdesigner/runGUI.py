@@ -64,15 +64,17 @@ def mainProgram():
     # Set up figure 1
     fig1 = Figure()
     graph1 = fig1.add_subplot(111)
-    x = [1,2,3]
-    y = [5,4,2]
+    x = [1,2,3,4,5,6,7,8,9,10]
+    y = [2,4,8,12,13,16,18,20,19,23]
     graph1.plot(x,y)
+    graph1.set_ylabel('Minutes')
+    graph1.set_title('Example plot')
 
     # set up figure 2
     fig2 = Figure()
     graph2 = fig2.add_subplot(111)
     graph2.bar([1,2], [2,8], align='center')
-    names = ['hi','yo']
+    names = ['A','B']
     graph2.set_xticks([1,2])
     graph2.set_xticklabels(names)
     graph2.set_ylabel('Minutes')
