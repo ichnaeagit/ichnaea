@@ -139,33 +139,33 @@ def buttonPressed():
 
         # Prints whichever projects people have, if they have them
         button01 = tk.Button(root,text = projects[4], bg="orange", command=lambda: saveinfo(ID,projects[4]), width = '50', height=3)
-        button01.grid()
+        button01.grid(pady=4)
         if projects[5]:
             button02 = tk.Button(root,text=projects[5], bg="blue", fg='white',command=lambda:saveinfo(ID,projects[5]), width = '50',height=3)
-            button02.grid()
+            button02.grid(pady=4)
         if projects[6]:
             button03 = tk.Button(root,text=projects[6], bg="cyan", command=lambda: saveinfo(ID,projects[6]), width = '50',height=3)
-            button03.grid()
+            button03.grid(pady=4)
         if projects[7]:
             button04 = tk.Button(root,text=projects[7], bg="Yellow", command=lambda: saveinfo(ID,projects[7]), width = '50',height=3)
-            button04.grid()
+            button04.grid(pady=4)
         if projects[8]:
             button05 = tk.Button(root,text=projects[8], bg="red", command=lambda: saveinfo(ID,projects[8]), width = '50',height=3)
-            button05.grid()
+            button05.grid(pady=4)
         if projects[9]:
             button06 = tk.Button(root,text=projects[9], bg="orange", command=lambda: saveinfo(ID,projects[9]), width = '50',height=3)
-            button06.grid()
+            button06.grid(pady=4)
         if projects[10]:
             button07 = tk.Button(root,text=projects[10], bg="blue", command=lambda: saveinfo(ID,projects[10]), fg='white', width = '50',height=3)
-            button07.grid()
+            button07.grid(pady=4)
         if projects[11]:
             button08 = tk.Button(root,text=projects[11], bg="cyan", command=lambda: saveinfo(ID,projects[11]), width = '50',height=3)
-            button08.grid()
+            button08.grid(pady=4)
         if projects[12]:
             button09 = tk.Button(root,text=projects[12], bg="yellow", command=lambda: saveinfo(ID,projects[12]), width = '50',height=3)
-            button09.grid()
+            button09.grid(pady=4)
         button10 = tk.Button(root,text='Clock Off', bg="red", command=lambda: saveinfo(ID,"Clock Off"), width = '50',height=3)
-        button10.grid()
+        button10.grid(pady=4)
     else: root.destroy()
 
 while continuousRun:
@@ -188,7 +188,7 @@ while continuousRun:
             helpText.set('Swipe until project picker appears')
             
             #scanButton = tk.Button(root,text='Click here to scan', bg="red", fg="white", height = 3, font=("Helvetica",16), command = buttonPressed)
-            #scanButton.pack(padx=5, pady=3)
+            #scanButton.pack(padx=5, pady=4)
 
             scanCard = tk.Label(root, text="Please Scan Card", font=("papyrus",24), fg="red", width=20)
             scanCard.grid(row=3, column=0,columnspan=2,pady=10)
