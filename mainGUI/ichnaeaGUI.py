@@ -6,6 +6,7 @@ import MySQLdb
 import time
 import readID
 from time import gmtime, strftime
+import datetime
 
 
 
@@ -41,8 +42,7 @@ def saveinfo(ID, project):
         lastLog = [s.strip('),)') for s in lastLog]
 
         # get current time
-        time = strftime("%Y %m %d %H %M %S", gmtime())
-
+        time = strftime("%Y %m %d %H %M %S")
         time = time.split()
 
         #print "current time is:"
@@ -58,7 +58,7 @@ def saveinfo(ID, project):
         # set minute differences
         timeDiffMin = (hourDiff * 60) + minDiff + (secDiff / 60)
         # adds offset from some error in time differences
-        timeDiffMin = timeDiffMin + 4.0
+        timeDiffMin = timeDiffMin + 2.0
 
         if timeDiffMin < 0:
                 print "Error in time difference"
