@@ -42,6 +42,7 @@ def saveinfo(ID, project):
 
         # get current time
         time = strftime("%Y %m %d %H %M %S", gmtime())
+
         time = time.split()
 
         #print "current time is:"
@@ -58,6 +59,10 @@ def saveinfo(ID, project):
         timeDiffMin = (hourDiff * 60) + minDiff + (secDiff / 60)
         # adds offset from some error in time differences
         timeDiffMin = timeDiffMin + 4.0
+
+        if timeDiffMin < 0:
+                print "Error in time difference"
+                timeDiffMin = 0
 
         # if someone clocks on for over 360min, then count only as 360 min
         if timeDiffMin > (360):
