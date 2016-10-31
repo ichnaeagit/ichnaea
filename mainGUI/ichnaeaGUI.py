@@ -7,7 +7,10 @@ import time
 import readID
 from time import gmtime, strftime
 import datetime
+<<<<<<< HEAD
 import urllib2
+=======
+>>>>>>> 87b1aeb4f8de7f7c5b91172f064982d70e6b6c7c
 
 
 
@@ -42,10 +45,6 @@ def saveinfo(ID, project):
         lastLog = [s.strip('(datetime.datetime(') for s in lastLog]
         lastLog = [s.strip('),)') for s in lastLog]
 
-        # get current time
-        #time = strftime("%Y %m %d %H %M %S")
-        #time = time.split()
-
         # gets current time from a website (notice: must adjust hour by 4!)
         pageURL = urllib2.urlopen("http://just-the-time.appspot.com")
         timeDate = pageURL.read()
@@ -72,14 +71,11 @@ def saveinfo(ID, project):
        
         # set minute differences
         timeDiffMin = (hourDiff * 60) + minDiff + (secDiff / 60)
-        # adds offset from some error in time differences
-        timeDiffMin = timeDiffMin #+ 8.4
 
         print timeDiffMin
-        
+
         if timeDiffMin < 0:
                 print "Error in time difference"
-                print timeDiffMin
                 timeDiffMin = 0
 
         # if someone clocks on for over 360min, then count only as 360 min
