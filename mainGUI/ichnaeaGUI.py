@@ -237,10 +237,10 @@ def buttonPressed():
     if projects[10]: padSize = 2
     
     # Create buttons
-    projects = projects[4:]
+    projects = projects[4:]    
     # For each valid project
-    i = int(1) # variable for color changing
-    for project in projects:
+    # i is index, for color changing
+    for i, project in enumerate(projects):
 
         project = str(project) # changes the project to a string
 
@@ -254,8 +254,6 @@ def buttonPressed():
             saveinfo(ID,project,name),  \
             width = '20', height=1, font = ("Helvetica", 24)) \
             .grid(pady=padSize)
-
-        i=i+1 # Iterates i
 
     # Creates clock off button
     tk.Button(root,text='Clock Off', bg="red", command=lambda: \

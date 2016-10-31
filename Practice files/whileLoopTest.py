@@ -1,7 +1,8 @@
-num = [1,2,3,4]
+projects = [('3333'),('project 1'), ('Project 2'), (None)]
 
-i=0
-while i < len(num):
-    print num[i]
 
-    i=i+1
+while "None" in projects: projects.remove('None')
+
+#projects.append('Clock off')
+
+print projects
