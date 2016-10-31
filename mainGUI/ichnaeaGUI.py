@@ -7,6 +7,7 @@ import time
 import readID
 from time import gmtime, strftime
 import datetime
+import urllib2
 
 
 
@@ -42,15 +43,29 @@ def saveinfo(ID, project):
         lastLog = [s.strip('),)') for s in lastLog]
 
         # get current time
-        time = strftime("%Y %m %d %H %M %S")
-        time = time.split()
+        #time = strftime("%Y %m %d %H %M %S")
+        #time = time.split()
 
-        #print "current time is:"
+        # gets current time from a website (notice: must adjust hour by 4!)
+        pageURL = urllib2.urlopen("http://just-the-time.appspot.com")
+        timeDate = pageURL.read()
+
+        timeDate = timeDate.replace('-',' ')
+        timeDate = timeDate.replace(':',' ')
+        time = timeDate.split()
+
+        #print lastLog
         #print time
+        
         # store time differences
-        secDiff = float(time[5]) - float(lastLog[5])
+        #sometimes sec diff is zero or isn't there so fixes it
+        try:
+                secDiff = float(time[5]) - float(lastLog[5])
+        except:
+                secDiff = 0
+        
         minDiff = float(time[4]) - float(lastLog[4])
-        hourDiff = float(time[3]) - float(lastLog[3])
+        hourDiff = (float(time[3])-4) - float(lastLog[3])
         dayDiff = float(time[2]) - float(lastLog[2])
         monthDiff = float(time[1]) - float(lastLog[1])
         yearDiff = float(time[0]) - float(lastLog[0])
@@ -58,19 +73,19 @@ def saveinfo(ID, project):
         # set minute differences
         timeDiffMin = (hourDiff * 60) + minDiff + (secDiff / 60)
         # adds offset from some error in time differences
-        timeDiffMin = timeDiffMin + 4.0
+        timeDiffMin = timeDiffMin #+ 8.4
 
+        print timeDiffMin
+        
         if timeDiffMin < 0:
                 print "Error in time difference"
+                print timeDiffMin
                 timeDiffMin = 0
 
         # if someone clocks on for over 360min, then count only as 360 min
         if timeDiffMin > (360):
             timeDiffMin = 360
-
-        # if they don't log off, give them them 360min
-        if dayDiff or monthDiff or yearDiff:
-           timeDiffMin = 360
+            print "time diff too long"
 
         # make sure to not count time off
         if loggedProject == "Clock Off":
@@ -79,6 +94,7 @@ def saveinfo(ID, project):
         db.close()
     except:
         print "error!"
+        tkMessageBox.showwarning("header", "Error regarding time durration. \n\nContact Teal")
         db.close()
 
     # print new project, and previous project
@@ -93,11 +109,12 @@ def saveinfo(ID, project):
         cursor.execute(addTime, values)
         db.commit()
         db.close()
-        print "commited log durr"
+        print "commited to db"
 
     except:
-
+        
         print "error writing to db"
+        tkMessageBox.showwarning("header", "Error writing to db. \n\nContact Teal")
         db.rollback()
         db.close()
 
@@ -132,6 +149,7 @@ def buttonPressed():
             cursor.execute(projectSearch)
             # fetch the username as a string
             projects = cursor.fetchone()
+            print projects[13]
             db.close()
         except:
             print "Getting projects failed"
