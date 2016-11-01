@@ -68,13 +68,12 @@ def readAndSave():
                 db.close()
             except:
                 print "Error finding user"
-                tkMessageBox.showwarning("header", "Failed to write to database. \n Check ethernet or if user is registered and try again.\n\nContact Teal")
+                #tkMessageBox.showwarning("header", "\n Check ethernet or if user is registered and try again.\n\nContact Teal")
 
-            if userClockNum:
+            if userName:
 
                 # Print writing successful, and ask for project input
                 print "\n%s has been successfully logged in" % (userName)
                 
             return userName, userClockNum
-
     

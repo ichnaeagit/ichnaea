@@ -16,7 +16,6 @@ def quitProgram():
         root.destroy()
         sys.exit()
 
-        
 def saveinfo(ID, project):
 
     #save username, clocknum, project, timestamp, and durration to db
@@ -29,6 +28,12 @@ def saveinfo(ID, project):
         cursor.execute(getTimeLogs)
         logtimes = cursor.fetchall()
 
+    except:
+        print "error in getting log times"
+        open('logFile.txt', 'a').write("error in getting log times\n")
+        db.close()
+
+    try:
         # extract the last log of the user
         lastLog = logtimes[-1]
 
@@ -47,13 +52,15 @@ def saveinfo(ID, project):
         timeDate = timeDate.replace('-',' ')
         timeDate = timeDate.replace(':',' ')
         time = timeDate.split()
+        for unit in time:
+            open('logFile.txt', 'a').write(unit+",")
         
         # store time differences
         #sometimes sec diff is zero or isn't there so fixes it
         try:
-                secDiff = float(time[5]) - float(lastLog[5])
+            secDiff = float(time[5]) - float(lastLog[5])
         except:
-                secDiff = 0
+            secDiff = 0
         
         minDiff = float(time[4]) - float(lastLog[4])
         hourDiff = (float(time[3])-4) - float(lastLog[3])
@@ -64,32 +71,35 @@ def saveinfo(ID, project):
         # set minute differences
         timeDiffMin = (hourDiff * 60) + minDiff + (secDiff / 60)
 
-        print timeDiffMin
+        #print timeDiffMin
 
         if timeDiffMin < 0:
                 print "Error in time difference"
+                open('logFile.txt', 'a').write("Error in time difference\n")
+
                 timeDiffMin = 0
 
         # if someone clocks on for over 360min, then count only as 360 min
         if timeDiffMin > (360):
             timeDiffMin = 360
             print "time diff too long"
+            open('logFile.txt', 'a').write("Time diff too long\n")
 
         # make sure to not count time off
         if loggedProject == "Clock Off":
             timeDiffMin = 0
         
         db.close()
+
     except:
-        print "error!"
+        print "Error in time calc"
         tkMessageBox.showwarning("header", "Error regarding time durration. \n\nContact Teal")
         timeDiffMin = 0
         loggedProject = "N/A"
-        db.close()
+
 
     # print new project, and previous project
     try:
-
         db = MySQLdb.connect("MUDDJ2-D1","RP","12345678","ichnaeadb")
         cursor = db.cursor()
         
@@ -99,11 +109,13 @@ def saveinfo(ID, project):
         cursor.execute(addTime, values)
         db.commit()
         db.close()
-        print "commited to db"
+        info = "\n%s commited to db\n" % ID
+        print info
+        open('logFile.txt', 'a').write(info)
 
     except:
-        
         print "error writing to db"
+        open('logFile.txt', 'a').write("Error writing to db\n")
         tkMessageBox.showwarning("header", "Error writing to db. \n\nContact Teal")
         db.rollback()
         db.close()
@@ -117,9 +129,6 @@ def buttonPressed():
 
     # Run program to scan card info to file
     name, ID = cardRead.readAndSave()
-    
-
-    
     userName = 'Hello '
     userName +=name
 
@@ -140,14 +149,17 @@ def buttonPressed():
         projects = cursor.fetchone()
         db.close()
     except:
-        print "Getting projects failed"
-        tkMessageBox.showwarning("header", "Failed to connect to database.\n Check ethernet cord, then try again. \n\nContact Teal")
+        print "Getting projects failed. User not registered (or connection issue)"
+        open('logFile.txt', 'a').write("Getting projects failed. User not registered (or connection issue)\n")
+        tkMessageBox.showwarning("header", "User not registered\nContact Teal")
+        root.destroy()
+        return
 
     # Prints whichever projects people have, if they have them
-    button01 = tk.Button(root,text = projects[4], bg="RoyalBlue1",  command=lambda: saveinfo(ID,projects[4]),  width = '20', height=1, font = ("Helvetica", 24))
-    if projects[10]: button01.grid(pady=2)
-    else: button01.grid(pady=10)
-
+    if projects[4]:
+        button01 = tk.Button(root,text = projects[4], bg="RoyalBlue1",  command=lambda: saveinfo(ID,projects[4]),  width = '20', height=1, font = ("Helvetica", 24))
+        if projects[10]: button01.grid(pady=2)
+        else: button01.grid(pady=10)
     if projects[5]:
         button02 = tk.Button(root,text=projects[5], bg="turquoise4",command=lambda: saveinfo(ID,projects[5]),  width = '20', height=1, font = ("Helvetica", 24))
         if projects[10]: button02.grid(pady=2)
