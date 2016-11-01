@@ -197,7 +197,7 @@ def buttonPressed():
         if projects[10]: button10.grid(pady=2)
         else: button10.gird(pady=10)
 
-    button11 = tk.Button(root,text='Clock Off', bg="red", command=lambda: saveinfo(ID,"Clock Off"), width = '20',height=1, font = ("Helvetica", 24))
+    button11 = tk.Button(root,text='Clock Off', bg="red", command=lambda: saveinfo(ID,"Clock Off",name), width = '20',height=1, font = ("Helvetica", 24))
     if projects[10]: button11.grid(pady=2)
     else: button11.grid(pady=10)
 
