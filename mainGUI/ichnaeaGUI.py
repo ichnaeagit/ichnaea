@@ -7,12 +7,7 @@ import time
 import readID
 from time import gmtime, strftime
 import datetime
-<<<<<<< HEAD
 import urllib2
-=======
->>>>>>> 87b1aeb4f8de7f7c5b91172f064982d70e6b6c7c
-
-
 
 continuousRun = True
 
@@ -91,6 +86,7 @@ def saveinfo(ID, project):
     except:
         print "error!"
         tkMessageBox.showwarning("header", "Error regarding time durration. \n\nContact Teal")
+        timeDiffMin = 0
         db.close()
 
     # print new project, and previous project
