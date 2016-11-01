@@ -150,37 +150,50 @@ def buttonPressed():
 
 
         # Prints whichever projects people have, if they have them
-        button01 = tk.Button(root,text = projects[4], bg="RoyalBlue1",        command=lambda: saveinfo(ID,projects[4]),  width = '20', height=1, font = ("Helvetica", 24))
-        button01.grid(pady=2)
+        button01 = tk.Button(root,text = projects[4], bg="RoyalBlue1",  command=lambda: saveinfo(ID,projects[4]),  width = '20', height=1, font = ("Helvetica", 24))
+        if projects[10]: button01.grid(pady=2)
+        else: button01.grid(pady=10)
+        
         if projects[5]:
-            button02 = tk.Button(root,text=projects[5], bg="turquoise4",      command=lambda: saveinfo(ID,projects[5]),  width = '20', height=1, font = ("Helvetica", 24))
-            button02.grid(pady=2)
+            button02 = tk.Button(root,text=projects[5], bg="turquoise4",command=lambda: saveinfo(ID,projects[5]),  width = '20', height=1, font = ("Helvetica", 24))
+            if projects[10]: button02.grid(pady=2)
+            else: button02.grid(pady=10)
         if projects[6]:
-            button03 = tk.Button(root,text=projects[6], bg="seagreen",      command=lambda: saveinfo(ID,projects[6]),  width = '20', height=1, font = ("Helvetica", 24))
-            button03.grid(pady=2)
+            button03 = tk.Button(root,text=projects[6], bg="seagreen",  command=lambda: saveinfo(ID,projects[6]),  width = '20', height=1, font = ("Helvetica", 24))
+            if projects[10]: button03.grid(pady=2)
+            else: button03.grid(pady=10)
         if projects[7]:
-            button04 = tk.Button(root,text=projects[7], bg="RoyalBlue1",      command=lambda: saveinfo(ID,projects[7]),  width = '20', height=1, font = ("Helvetica", 24))
-            button04.grid(pady=2)
+            button04 = tk.Button(root,text=projects[7], bg="RoyalBlue1",command=lambda: saveinfo(ID,projects[7]),  width = '20', height=1, font = ("Helvetica", 24))
+            if projects[10]: button04.grid(pady=2)
+            else: button04.grid(pady=10)
         if projects[8]:
-            button05 = tk.Button(root,text=projects[8], bg="turquoise4",      command=lambda: saveinfo(ID,projects[8]),  width = '20', height=1, font = ("Helvetica", 24))
-            button05.grid(pady=2)
+            button05 = tk.Button(root,text=projects[8], bg="turquoise4",command=lambda: saveinfo(ID,projects[8]),  width = '20', height=1, font = ("Helvetica", 24))
+            if projects[10]: button05.grid(pady=2)
+            else: button05.grid(pady=10)
         if projects[9]:
-            button06 = tk.Button(root,text=projects[9], bg="seagreen",     command=lambda: saveinfo(ID,projects[9]),  width = '20', height=1, font = ("Helvetica", 24))
-            button06.grid(pady=2)
+            button06 = tk.Button(root,text=projects[9], bg="seagreen",  command=lambda: saveinfo(ID,projects[9]),  width = '20', height=1, font = ("Helvetica", 24))
+            if projects[10]: button06.grid(pady=2)
+            else: button06.grid(pady=10)
         if projects[10]:
-            button07 = tk.Button(root,text=projects[10], bg="RoyalBlue1",     command=lambda: saveinfo(ID,projects[10]), width = '20', height=1, font = ("Helvetica", 24))
-            button07.grid(pady=2)
+            button07 = tk.Button(root,text=projects[10], bg="RoyalBlue1",command=lambda: saveinfo(ID,projects[10]), width = '20', height=1, font = ("Helvetica", 24))
+            if projects[10]: button07.grid(pady=2)
+            else: button07.grid(pady=10)
         if projects[11]:
-            button08 = tk.Button(root,text=projects[11], bg="turquoise4",     command=lambda: saveinfo(ID,projects[11]), width = '20', height=1, font = ("Helvetica", 24))
-            button08.grid(pady=2)
+            button08 = tk.Button(root,text=projects[11], bg="turquoise4",command=lambda: saveinfo(ID,projects[11]), width = '20', height=1, font = ("Helvetica", 24))
+            if projects[10]: button08.grid(pady=2)
+            else: button09.grid(pady=10)
         if projects[12]:
-            button09 = tk.Button(root,text=projects[12], bg="seagreen",    command=lambda: saveinfo(ID,projects[12]), width = '20', height=1, font = ("Helvetica", 24))
-            button09.grid(pady=2)
+            button09 = tk.Button(root,text=projects[12], bg="seagreen", command=lambda: saveinfo(ID,projects[12]), width = '20', height=1, font = ("Helvetica", 24))
+            if projects[10]: button09.grid(pady=2)
+            else: button09.grid(pady=10)
         if projects[13]:
-            button10 = tk.Button(root,text=projects[13], bg="turquoise1",     command=lambda: saveinfo(ID,projects[13]), width = '20', height=1, font = ("Helvetica", 24))
-            button10.grid(pady=2)           
-        button10 = tk.Button(root,text='Clock Off', bg="red", command=lambda: saveinfo(ID,"Clock Off"), width = '20',height=1, font = ("Helvetica", 24))
-        button10.grid(pady=2)
+            button10 = tk.Button(root,text=projects[13], bg="turquoise1",command=lambda: saveinfo(ID,projects[13]), width = '20', height=1, font = ("Helvetica", 24))
+            if projects[10]: button10.grid(pady=2)
+            else: button10.gird(pady=10)
+
+        button11 = tk.Button(root,text='Clock Off', bg="red", command=lambda: saveinfo(ID,"Clock Off"), width = '20',height=1, font = ("Helvetica", 24))
+        if projects[10]: button11.grid(pady=2)
+        else: button11.grid(pady=10)
     else: root.destroy()
 
 while continuousRun:
