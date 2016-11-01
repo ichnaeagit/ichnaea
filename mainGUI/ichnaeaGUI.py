@@ -87,6 +87,7 @@ def saveinfo(ID, project):
         print "error!"
         tkMessageBox.showwarning("header", "Error regarding time durration. \n\nContact Teal")
         timeDiffMin = 0
+        loggedProject = "N/A"
         db.close()
 
     # print new project, and previous project
