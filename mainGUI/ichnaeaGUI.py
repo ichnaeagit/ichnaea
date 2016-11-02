@@ -52,8 +52,10 @@ def saveinfo(ID, project, userName):
         timeDate = timeDate.replace('-',' ')
         timeDate = timeDate.replace(':',' ')
         time = timeDate.split()
+        open('logFile.txt', 'a').write("Time now:")
         for unit in time:
             open('logFile.txt', 'a').write(unit+",")
+        open('logFile.txt', 'a').write("\n")
         
         # store time differences
         #sometimes sec diff is zero or isn't there so fixes it
@@ -67,16 +69,23 @@ def saveinfo(ID, project, userName):
         dayDiff = float(time[2]) - float(lastLog[2])
         monthDiff = float(time[1]) - float(lastLog[1])
         yearDiff = float(time[0]) - float(lastLog[0])
+
+        open('logFile.txt', 'a').write("Time last log:")
+        for x in range(0,5):
+                open('logFile.txt', 'a').write(lastLog[x]+",")
+        open('logFile.txt', 'a').write("\n")
        
         # set minute differences
         timeDiffMin = (hourDiff * 60) + minDiff + (secDiff / 60)
 
         #print timeDiffMin
+        info = str(timeDiffMin)
+        info = "Unaltered time diff: " + info + " min\n"
+        open('logFile.txt', 'a').write(info)
 
-        if timeDiffMin < 0:
+        if timeDiffMin < 0 : #and dayDiff = 0:
                 print "Error in time difference"
                 open('logFile.txt', 'a').write("Error in time difference\n")
-
                 timeDiffMin = 0
 
         # if someone clocks on for over 360min, then count only as 360 min
@@ -109,7 +118,7 @@ def saveinfo(ID, project, userName):
         cursor.execute(addTime, values)
         db.commit()
         db.close()
-        info = "\n%s commited to db\n" % userName
+        info = "%s commited to db\n" % userName
         print info
         open('logFile.txt', 'a').write(info)
 
@@ -120,6 +129,7 @@ def saveinfo(ID, project, userName):
         db.rollback()
         db.close()
 
+    open('logFile.txt', 'a').write("\n")
     root.destroy()
 
 def buttonPressed():
