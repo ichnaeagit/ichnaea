@@ -9,10 +9,14 @@ from time import gmtime, strftime
 import datetime
 import urllib2
 
+
+
+
 continuousRun = True
 
 def quitProgram():
         continuousRun = False
+        print "Exiting"
         root.destroy()
         sys.exit()
 
@@ -65,7 +69,7 @@ def saveinfo(ID, project, userName):
             secDiff = 0
         
         minDiff = float(time[4]) - float(lastLog[4])
-        hourDiff = (float(time[3])-4) - float(lastLog[3])
+        hourDiff = (float(time[3])-5) - float(lastLog[3])
         dayDiff = float(time[2]) - float(lastLog[2])
         monthDiff = float(time[1]) - float(lastLog[1])
         yearDiff = float(time[0]) - float(lastLog[0])
@@ -102,10 +106,10 @@ def saveinfo(ID, project, userName):
 
     except:
         print "Error in time calc"
-        tkMessageBox.showwarning("header", "Error regarding time durration. \n\nContact Teal")
+        open('logFile.txt', 'a').write("Error in time calc or first log")
+        tkMessageBox.showwarning("header", "Error regarding time durration.\n OR this is your first log. \n\nContact Teal")
         timeDiffMin = 0
         loggedProject = "N/A"
-
 
     # print new project, and previous project
     try:
@@ -211,6 +215,7 @@ def buttonPressed():
     if projects[10]: button11.grid(pady=2)
     else: button11.grid(pady=10)
 
+
 while continuousRun:
 
     class MainApplication(tk.Frame):
@@ -235,7 +240,16 @@ while continuousRun:
             
             root.after(500, buttonPressed)
 
+            #print "started\n\n"
+
+            #root.protocol('WM_DELETE_WINDOW', quitProgram)
+
     if __name__ == "__main__":
+
+        global button01, button02, button03, button04, button05
+        global button06, button07, button08, button09, button10 
+        global button11, button12
+            
         root = tk.Tk()
         root.title("Ichnaea time tracking")
         #MainApplication(root).pack(side="top",fill="both",expand=True)
